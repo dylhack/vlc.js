@@ -1,0 +1,22 @@
+{
+  "name": "vlc.js",
+  "version": "1.0.0",
+  "description": "A VLC HTTP Endpoint wrapper for NodeJS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylhack/vlc.js.git"
+  },
+  "author": "dylhack",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dylhack/vlc.js/issues"
+  },
+  "homepage": "https://github.com/dylhack/vlc.js#readme"
+}
