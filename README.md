@@ -1,5 +1,5 @@
 # VLC.js
-A HTTP Endpoint NodeJS wrapper for VLC. Three parts to this wrapper; commands, routes, and client. The wrapper is callback-oriented, but the Client returns promises for each method and will resolve with VLC status.
+A HTTP Endpoint wrapper for VLC. Three parts to this wrapper; commands, routes, and client. The wrapper is callback-oriented, but the Client returns promises for each method and will resolve with VLC status.
 
 ## Routes
  - [status](./src/routes/status.js), 
