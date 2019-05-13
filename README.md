@@ -1,8 +1,8 @@
-# VLC.js
+![Banner](./GitHub%20Banner2.png)
 [![Travis](https://travis-ci.com/dylhack/vlc.js.svg?branch=master)](https://travis-ci.com/dylhack/vlc.js)
 [![npm version](https://badge.fury.io/js/vlc.js.svg)](https://badge.fury.io/js/vlc.js)
 
-A HTTP Endpoint wrapper for VLC. Three parts to this wrapper; commands, routes, and client. The wrapper is callback-oriented, but the Client returns promises for each method and will resolve with VLC status.
+VLC HTTP endpoint wrapper for NodeJS. Three parts to this wrapper; commands, routes, and client. The wrapper is callback-oriented, but the Client returns promises for each method and will resolve with VLC's current status.
 
 ## Routes
  - [status](./src/routes/status.js), 
