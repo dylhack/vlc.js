@@ -16,8 +16,8 @@ const template = "http://USERNAME:PASSWORD@ADDRESS:PORT/requests/status.json?com
  */
 module.exports = (details, callback) => {
 	let requested = template
-		.replace(/(USERNAME)/, details.username ? details.username : "")
-		.replace(/(PASSWORD)/, details.password ? details.password : "")
+		.replace(/(USERNAME)/, details.username ? encodeURIComponent(details.username) : "")
+		.replace(/(PASSWORD)/, details.password ? encodeURIComponent(details.password) : "")
 		.replace(
 			/(ADDRESS)/,
 			details.address ? details.address : "127.0.0.1"
