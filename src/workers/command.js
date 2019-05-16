@@ -27,8 +27,7 @@ module.exports = (details, callback) => {
 		.replace(/(PORT)/, details.port ? details.port : "9090");
 	let url = URL.parse(requested, true);
 	let str = "";
-	http.get(url, res => {
-		res.on("error", err => callback(err));
+	let req = http.get(url, res => {
 		res.on("data", data => (str += data));
 		res.on("end", () => {
 			if (res.statusCode == 200) {
@@ -47,4 +46,5 @@ module.exports = (details, callback) => {
 				);
 		});
 	});
+	req.on("error", err => callback(err));
 };

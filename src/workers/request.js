@@ -25,8 +25,7 @@ module.exports = (details, callback) => {
 
 	let url = URL.parse(requested);
 	let str = "";
-	http.get(url, res => {
-		res.on("error", err => callback(err));
+	let req = http.get(url, res => {
 		res.on("data", data => (str += data));
 		res.on("end", () => {
 			if (res.statusCode == 200) {
@@ -45,4 +44,5 @@ module.exports = (details, callback) => {
 				);
 		});
 	});
+	req.on("error", err => callback(err));
 };
