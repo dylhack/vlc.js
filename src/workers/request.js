@@ -1,9 +1,17 @@
+/**
+ * This module is responsible
+ * for requesting data structures
+ * that VLC delivers on their HTTP
+ * endpoint. These two data structures
+ * are the "status.json" and "playlist.json".
+ * For further details see the provided link below
+ * {@link} https://wiki.videolan.org/VLC_HTTP_requests
+ */
 const http = require("http");
 const URL = require("url");
 const template = "http://USERNAME:PASSWORD@ADDRESS:PORT/requests/PATH";
 
 /**
- * {@link} https://wiki.videolan.org/VLC_HTTP_requests
  * @param {Object} details
  * - @prop {String} username [default: ""]
  * - @prop {String} password [default: ""]

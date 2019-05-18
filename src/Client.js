@@ -1,6 +1,11 @@
 /**
- * Promise-oriented VLC Client
- * Includes routes & commands
+ * Promise-oriented VLC Client.
+ * This Client uses everything
+ * in src/commands & src/routes.
+ *
+ * Every command resolves with VLC's
+ * status.json. All the actual communication
+ * with VLC is done in src/workers
  * @author dylhack
  */
 const status = require("./routes/status.js");
@@ -55,8 +60,13 @@ module.exports = class Client {
 			});
 		});
 	}
-
-	// Add song based on MRL (media resource locator)
+	
+	/**
+	 * @method add
+	 * @desc Add song based on MRL (media resource locator)
+	 * @param {String} mrl
+	 * @returns {Promise<Status>}
+	 */
 	add(mrl) {
 		return new Promise((res, rej) => {
 			if (mrl) {
@@ -68,7 +78,11 @@ module.exports = class Client {
 		});
 	}
 
-	// Clear playlist
+	/**
+	 * @method empty
+	 * @desc Clear playlist
+	 * @returns {Promise<Status>}
+	 */
 	empty() {
 		return new Promise((res, rej) => {
 			empty(this.details, (err, data) => {
@@ -78,7 +92,11 @@ module.exports = class Client {
 		})
 	}
 
-	// Toggle fullscreen (pretty useless)
+	/**
+	 * @method fullscreen
+	 * @desc Toggle fullscreen (pretty useless)
+	 * @returns {Promise<Status>}
+	 */
 	fullscreen() {
 		return new Promise((res, rej) => {
 			fullscreen(this.details, (err, data) => {
@@ -88,7 +106,11 @@ module.exports = class Client {
 		})
 	}
 
-	// Loop playlist
+	/**
+	 * @method loop
+	 * @desc Loop playlist
+	 * @returns {Promise<Status>}
+	 */
 	loop() {
 		return new Promise((res, rej) => {
 			loop(this.details, (err, data) => {
@@ -98,7 +120,11 @@ module.exports = class Client {
 		})
 	}
 
-	// Play next song
+	/**
+	 * @method next
+	 * @desc Play next song
+	 * @returns {Promise<Status>}
+	 */
 	next() {
 		return new Promise((res, rej) => {
 			next(this.details, (err, data) => {
@@ -108,8 +134,12 @@ module.exports = class Client {
 		})
 	}
 
-	// Pause current song 
-	// If used again it will resume the song
+	/**
+	 * @method puase
+	 * @desc Pause current song.
+	   If used again it will resume the current song
+	 * @returns {Promise<Status>}
+	 */
 	pause() {
 		return new Promise((res, rej) => {
 			pause(this.details, (err, data) => {
@@ -119,8 +149,13 @@ module.exports = class Client {
 		})
 	}
 
-	// Play song based on ID
-	// If no ID is provided it'll play current song (restart / unpause)
+	/**
+	 * @method play
+	 * @desc Play song based on ID
+	   If no ID is provided it'll play current song (restart / unpause)
+	 * @param {String} id
+	 * @returns {Promise<Status>}
+	 */
 	play(id) {
 		return new Promise((res, rej) => {
 			play(this.details, id, (err, data) => {
@@ -130,7 +165,11 @@ module.exports = class Client {
 		})
 	}
 
-	// Play previous song
+	/**
+	 * @method previous
+	 * @desc Play previous song
+	 * @returns {Promise<Status>}
+	 */
 	previous() {
 		return new Promise((res, rej) => {
 			previous(this.details, (err, data) => {
@@ -140,8 +179,13 @@ module.exports = class Client {
 		})
 	}
 
-	// Remove song based on ID
-	// If no ID is provided it'll remove current song
+	/**
+	 * @method remove
+	 * @desc Remove song based on ID
+	   If an ID is provided it'll remove current song
+	 * @param {String} id
+	 * @returns {Promise<Status>}
+	 */
 	remove(id) {
 		return new Promise((res, rej) => {
 			remove(this.details, (err, data) => {
@@ -151,7 +195,11 @@ module.exports = class Client {
 		})
 	}
 
-	// Repeat song
+	/** 
+	 * @method repeat
+	 * @desc Repeat the current song
+	 * @returns {Promise<Status>}
+	 */
 	repeat() {
 		return new Promise((res, rej) => {
 			repeat(this.details, (err, data) => {
@@ -160,8 +208,12 @@ module.exports = class Client {
 			})
 		})
 	}
-
-	// Shuffle playlist
+ 
+	/**
+	 * @method shuffle
+	 * @desc Shuffle playlist
+	 * @returns {Promise<Status>}
+	 */
 	shuffle() {
 		return new Promise((res, rej) => {
 			shuffle(this.details, (err, data) => {
@@ -171,7 +223,12 @@ module.exports = class Client {
 		})
 	}
 
-	// Set volume
+	/**
+	 * @method volume
+	 * @desc Set volume
+	 * @param {String || Number} value
+	 * @returns {Promise<Status>}
+	 */
 	volume(value) {
 		return new Promise((res, rej) => {
 			volume(this.details, value, (err, data) => {

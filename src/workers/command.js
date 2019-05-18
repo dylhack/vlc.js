@@ -1,10 +1,17 @@
+/**
+ * This module is responsible
+ * for delivering query parameters
+ * (aka "commands") to VLC's http
+ * endpoint. For further details see
+ * the provided link below
+ * {@link} https://wiki.videolan.org/VLC_HTTP_requests
+ */
 const http = require("http");
 const querystring = require('querystring');
 const URL = require("url");
 const template = "http://USERNAME:PASSWORD@ADDRESS:PORT/requests/status.json?command=COMMAND&QUERY";
 
 /**
- * @desc For commands see docs/COMMANDS.md
  * @param {Object} details
  * - @prop {String} username	[default: ""]
  * - @prop {String} password	[default: ""]
