@@ -51,3 +51,6 @@ VLC HTTP endpoint wrapper for NodeJS. Three parts to this wrapper; commands, rou
  - [volume](./src/commands/volume.js)
    - Set volume based on value
    - Client.volume(value)
+
+## Contact us
+Join us on [Discord.](https://discord.gg/XkqW2Fd)
