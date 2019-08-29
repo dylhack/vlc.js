@@ -1,4 +1,5 @@
-/* eslint-disable global-require */
+/* eslint-disable */
 module.exports = {
-  Client: require('./src/Client.js'),
+  Client: require('./src/Client'),
+  requester: require('./src/Requester')
 };

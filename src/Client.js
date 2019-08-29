@@ -1,15 +1,10 @@
-/**
- * @module Client
- * @author dylhack
- * @requires CommandHandler
- * @requires DataHandler
- * @desc Promise-oriented VLC Client. This Client uses everything in src/commands & src/routes.
- * Every command resolves with VLC's status.json. All the actual communication with VLC is done in
- * src/workers
- */
-const command = require('./CommandHandler.js');
-const request = require('./DataHandler.js');
 
+
+Object.defineProperty(exports, '__esModule', { value: true });
+const requester = require('./Requester');
+
+const { command } = requester;
+const request = requester.data;
 /**
  * @class Client
  * @constructor
@@ -24,211 +19,200 @@ const request = require('./DataHandler.js');
  *  console.log("Got the status! ", status);
  * });
  */
-module.exports = class Client {
-  constructor(details) {
+const Client = /** @class */ (function () {
+  function Client(details) {
     this.details = details;
   }
-
   /**
-   * @method getStatus
-   * @return {Promise<Status>}
-   */
-  getStatus() {
-    return new Promise((res, rej) => {
-      request(this.details, 'status.json', (err, data) => {
-        if (err) rej(err);
-        else res(data);
-      });
-    });
-  }
-
+     * @method getStatus
+     * @return {Promise<VLCStatus>}
+     */
+  Client.prototype.getStatus = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      request(_this.details, 'status.json')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method getPlaylist
-   * @return {Promise<Playlist>}
-   */
-  getPlaylist() {
-    return new Promise((res, rej) => {
-      request(this.details, 'playlist.json', (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method getPlaylist
+     * @return {Promise<VLCPlaylist>}
+     */
+  Client.prototype.getPlaylist = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      request(_this.details, 'playlist.json')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method add
-   * @param {String} mrl media resource locator
-   * @returns {Promise<Status>}
-   * @desc Add song based on MRL (media resource locator)
-   */
-  add(mrl) {
-    return new Promise((res, rej) => {
+     * @method add
+     * @param {String} mrl media resource locator
+     * @returns {Promise<VLCStatus>}
+     * @desc Add song based on MRL (media resource locator)
+     */
+  Client.prototype.add = function (mrl) {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
       if (mrl) {
-        command(this.details, 'in_enqueue', mrl, (err, data) => {
-          rej(err);
-          res(data);
-        });
-      } else rej(new Error('Did not provide a MRL'));
-    });
-  }
-
+        command(_this.details, 'in_enqueue', mrl)
+          .then(resolve)
+          .catch(reject);
+      } else { reject(new Error('Did not provide a MRL')); }
+    }));
+  };
   /**
-   * @method empty
-   * @desc Clear playlist
-   * @returns {Promise<Status>}
-   */
-  empty() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_empty', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method empty
+     * @desc Clear playlist
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.empty = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_empty')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method fullscreen
-   * @desc Toggle fullscreen (pretty useless)
-   * @returns {Promise<Status>}
-   */
-  fullscreen() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_fullscreen', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method fullscreen
+     * @desc Toggle fullscreen (pretty useless)
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.fullscreen = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_fullscreen')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method loop
-   * @desc Loop playlist
-   * @returns {Promise<Status>}
-   */
-  loop() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_loop', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method loop
+     * @desc Loop playlist
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.loop = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_loop', undefined)
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method next
-   * @desc Play next song
-   * @returns {Promise<Status>}
-   */
-  next() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_next', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method next
+     * @desc Play next song
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.next = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_next')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method pause
-   * @desc Pause current song.
-   * If used again it will resume the current song
-   * @returns {Promise<Status>}
-   */
-  pause() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_pause', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method pause
+     * @desc Pause current song.
+     * If used again it will resume the current song
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.pause = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_pause')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method play
-   * @desc Play song based on ID
-   * If no ID is provided it'll play current song (restart / unpause)
-   * @param {String} id
-   * @returns {Promise<Status>}
-   */
-  play(id) {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_play', id, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method play
+     * @desc Play song based on ID
+     * If no ID is provided it'll play current song (restart / unpause)
+     * @param {String} id
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.play = function (id) {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_play')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method previous
-   * @desc Play previous song
-   * @returns {Promise<Status>}
-   */
-  previous() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_previous', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method previous
+     * @desc Play previous song
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.previous = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_previous')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method remove
-   * @desc Remove song based on ID
-     If an ID is provided it'll remove current song
-   * @param {String} id
-   * @returns {Promise<Status>}
-   */
-  remove(id) {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_delete', id, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method remove
+     * @desc Remove song based on ID
+       If an ID is provided it'll remove current song
+     * @param {String} id
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.remove = function (id) {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_delete')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method repeat
-   * @desc Repeat the current song
-   * @returns {Promise<Status>}
-   */
-  repeat() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_repeat', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method repeat
+     * @desc Repeat the current song
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.repeat = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_repeat')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method shuffle
-   * @desc Shuffle playlist
-   * @returns {Promise<Status>}
-   */
-  shuffle() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_random', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
+     * @method shuffle
+     * @desc Shuffle playlist
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.shuffle = function () {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'pl_random')
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
   /**
-   * @method volume
-   * @desc Set volume
-   * @param {Number} value
-   * @returns {Promise<Status>}
-   */
-  volume(value) {
-    return new Promise((res, rej) => {
-      command(this.details, 'volume', value, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-};
+     * @method volume
+     * @desc Set volume
+     * @param {Number} value
+     * @returns {Promise<VLCStatus>}
+     */
+  Client.prototype.volume = function (value) {
+    const _this = this;
+    return new Promise(((resolve, reject) => {
+      command(_this.details, 'volume', value)
+        .then(resolve)
+        .catch(reject);
+    }));
+  };
+  return Client;
+}());
+
+module.exports = Client;
