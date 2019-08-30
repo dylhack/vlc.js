@@ -8,9 +8,10 @@
 import {VLCPlaylist} from "./types/VLCPlaylist";
 import {VLCStatus} from "./types/VLCStatus";
 
-const requester = require('./Requester');
-const command = requester.command;
-const request = requester.data;
+const {
+    command,
+    fetch
+} = require('./Requester');
 
 /**
  * @class Client
@@ -39,7 +40,7 @@ class Client {
      */
     getStatus(): Promise<VLCStatus> {
         return new Promise((resolve, reject) => {
-            request(this.details, 'status.json')
+            fetch(this.details, 'status.json')
                 .then(resolve)
                 .catch(reject);
         });
@@ -51,7 +52,7 @@ class Client {
      */
     getPlaylist(): Promise<VLCPlaylist> {
         return new Promise((resolve, reject) => {
-            request(this.details, 'playlist.json')
+            fetch(this.details, 'playlist.json')
                 .then(resolve)
                 .catch(reject);
         });
@@ -148,7 +149,7 @@ class Client {
      */
     play(id: string): Promise<VLCStatus> {
         return new Promise((resolve, reject) => {
-            command(this.details, 'pl_play')
+            command(this.details, 'pl_play', id)
                 .then(resolve)
                 .catch(reject);
         });
@@ -176,7 +177,7 @@ class Client {
      */
     remove(id: string): Promise<VLCStatus> {
         return new Promise((resolve, reject) => {
-            command(this.details, 'pl_delete')
+            command(this.details, 'pl_delete', id)
                 .then(resolve)
                 .catch(reject);
         });

@@ -1,21 +1,17 @@
 const http = require('http');
 const url = require('url');
+const buffer = require('buffer');
 import {VLCStatus} from "./types/VLCStatus";
 import {Details} from './types/Details';
 import {VLCPlaylist} from "./types/VLCPlaylist";
 
 const requester = {
-    data: undefined,
+    fetch: undefined,
     command: undefined,
-    _templates: {
-        query: 'http://USERNAME:PASSWORD@ADDRESS:PORT/requests/status.json?command=COMMAND&QUERY',
-        file: 'http://USERNAME:PASSWORD@ADDRESS:PORT/requests/PATH'
-    },
     _request: undefined,
     _defaultDetails: {
-        username: '',
         password: '',
-        port: ''
+        port: '8080'
     }
 };
 
@@ -23,21 +19,15 @@ const requester = {
  * This method is responsible for requesting data structures that VLC provides on their HTTP
  * endpoint. These two data structures are the "status.json" and "playlist.json". For further
  * details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
- * @method data
+ * @method fetch
  * @param {Details} details
  * @param {String} file
  * @returns {Promise<VLCStatus>|Promise<VLCPlaylist>}
  */
-requester.data = (details = requester._defaultDetails, file) => new Promise((resolve, reject) => {
-    const requested = requester._templates.file
-        .replace(/(USERNAME)/, encodeURIComponent(details.username))
-        .replace(/(PASSWORD)/, encodeURIComponent(details.password))
-        .replace(/(ADDRESS)/, details.address)
-        .replace(/(PORT)/, details.port)
-        .replace(/(PATH)/, file);
+requester.fetch = (details = requester._defaultDetails, file: string) => new Promise((resolve, reject) => {
+    const address = new url.URL(`http://${details.address}:${details.port}/requests/${file}`);
 
-    const address = url.parse(requested);
-    requester._request(address)
+    requester._request(address, details)
         .then(resolve)
         .catch(reject);
 });
@@ -45,45 +35,48 @@ requester.data = (details = requester._defaultDetails, file) => new Promise((res
 /**
  * This method is responsible for delivering query parameters (aka "commands") to VLC's http
  * endpoint. For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
- * @param details
- * @param command
+ * @param {Details} details
+ * @param {String} command
+ * @param {String} query
  * @returns {Promise<VLCStatus>}
  */
-requester.command = (details = requester._defaultDetails, command) => new Promise((resolve, reject) => {
-    const requested = requester._templates.query
-        .replace(/(USERNAME)/, encodeURIComponent(details.username))
-        .replace(/(PASSWORD)/, encodeURIComponent(details.password))
-        .replace(/(ADDRESS)/, details.address)
-        .replace(/(COMMAND)/, command)
-        .replace(/(QUERY)/, command)
-        .replace(/(PORT)/, details.port);
+requester.command = (details = requester._defaultDetails, command: string, query: string) => new Promise((resolve, reject) => {
+    const address = new url.URL(`http://${details.address}:${details.port}/requests/status.json?command=${command}&${query}`);
 
-    const address = url.parse(requested, true);
-    requester._request(address)
+    requester._request(address, details)
         .then(resolve)
         .catch(reject);
 });
 
-requester._request = (address) => new Promise((resolve, reject) => {
+/**
+ * @param {String} address
+ * @param {Details} details
+ * @private
+ * @return {Promise<VLCStatus>|Promise<VLCPlaylist>}
+ */
+requester._request = (address: string, details: Details) => new Promise((resolve, reject) => {
+    const basicAuth = new buffer.Buffer.from(`:${details.password}`)
+        .toString('base64');
     let str = '';
-    const req = http.get(address, (res) => {
+    const req = http.get(address, {
+        headers: {
+            'Authorization': `Basic ${basicAuth}`
+        }
+    }, (res) => {
+        res.on('error', reject);
         res.on('data', (data) => {
             str += data;
         });
         res.on('end', () => {
-            if (res.statusCode === 200) {
                 try {
                     const data = JSON.parse(str);
                     resolve(data);
                 } catch (e) {
                     reject(e);
                 }
-            } else {
-                reject(new Error(`Rejected request with status-code: ${res.statusCode}`));
-            }
         });
     });
-    req.on('error', err => reject(err));
+    req.on('error', reject);
 });
 
 module.exports = requester;
