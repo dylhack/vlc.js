@@ -5,8 +5,7 @@
  * Every command resolves with VLC's status.json. All the actual communication with VLC is done in
  * src/workers
  */
-import {VLCPlaylist} from "./types/VLCPlaylist";
-import {VLCStatus} from "./types/VLCStatus";
+import {Details, VLCPlaylist, VLCStatus} from "../index";
 
 const {
     command,
@@ -17,20 +16,11 @@ const {
  * @class Client
  * @constructor
  * @param {Details} details
- * @example
- * const client = new Client({
- *  password: 'rosebud',
- *  port: 9090
- * });
- * client.getStatus()
- * .then((status) => {
- *  console.log("Got the status! ", status);
- * });
  */
 class Client {
-    private details: object;
+    private details: Details;
 
-    constructor(details) {
+    constructor(details: Details) {
         this.details = details;
     }
 
@@ -170,8 +160,7 @@ class Client {
 
     /**
      * @method remove
-     * @desc Remove song based on ID
-     If an ID is provided it'll remove current song
+     * @desc Remove song based on ID. If an ID isn't provided it'll remove current song
      * @param {String} id
      * @returns {Promise<VLCStatus>}
      */

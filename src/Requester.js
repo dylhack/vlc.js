@@ -1,91 +1,79 @@
-
-
-Object.defineProperty(exports, '__esModule', { value: true });
-const http = require('http');
-const url = require('url');
-
-const requester = {
-  data: undefined,
-  command: undefined,
-  _templates: {
-    query: 'http://USERNAME:PASSWORD@ADDRESS:PORT/requests/status.json?command=COMMAND&QUERY',
-    file: 'http://USERNAME:PASSWORD@ADDRESS:PORT/requests/PATH',
-  },
-  _request: undefined,
-  _defaultDetails: {
-    username: '',
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var http = require('http');
+var URL = require('url').URL;
+var Buffer = require('buffer').Buffer;
+var _defaultDetails = {
+    address: '127.0.0.1',
     password: '',
-    port: '',
-  },
+    port: '8080'
 };
 /**
  * This method is responsible for requesting data structures that VLC provides on their HTTP
  * endpoint. These two data structures are the "status.json" and "playlist.json". For further
  * details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
- * @method data
+ * @method fetch
  * @param {Details} details
  * @param {String} file
- * @returns {Promise<VLCStatus>|Promise<VLCPlaylist>}
+ * @returns {Promise<VLCStatus | VLCPlaylist>}
  */
-requester.data = function (details, file) {
-  if (details === void 0) { details = requester._defaultDetails; }
-  return new Promise(((resolve, reject) => {
-    const requested = requester._templates.file
-      .replace(/(USERNAME)/, encodeURIComponent(details.username))
-      .replace(/(PASSWORD)/, encodeURIComponent(details.password))
-      .replace(/(ADDRESS)/, details.address)
-      .replace(/(PORT)/, details.port)
-      .replace(/(PATH)/, file);
-    const address = url.parse(requested);
-    requester._request(address)
-      .then(resolve)
-      .catch(reject);
-  }));
-};
+function fetch(details, file) {
+    if (details === void 0) { details = _defaultDetails; }
+    return new Promise(function (resolve, reject) {
+        var address = new URL("http://" + details.address + ":" + details.port + "/requests/" + file);
+        _request(address, details)
+            .then(resolve)
+            .catch(reject);
+    });
+}
 /**
  * This method is responsible for delivering query parameters (aka "commands") to VLC's http
  * endpoint. For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
- * @param details
- * @param command
+ * @param {Details} details
+ * @param {String} command
+ * @param {String} query
  * @returns {Promise<VLCStatus>}
  */
-requester.command = function (details, command) {
-  if (details === void 0) { details = requester._defaultDetails; }
-  return new Promise(((resolve, reject) => {
-    const requested = requester._templates.query
-      .replace(/(USERNAME)/, encodeURIComponent(details.username))
-      .replace(/(PASSWORD)/, encodeURIComponent(details.password))
-      .replace(/(ADDRESS)/, details.address)
-      .replace(/(COMMAND)/, command)
-      .replace(/(QUERY)/, command)
-      .replace(/(PORT)/, details.port);
-    const address = url.parse(requested, true);
-    requester._request(address)
-      .then(resolve)
-      .catch(reject);
-  }));
-};
-requester._request = function (address) {
-  return new Promise(((resolve, reject) => {
-    let str = '';
-    const req = http.get(address, (res) => {
-      res.on('data', (data) => {
-        str += data;
-      });
-      res.on('end', () => {
-        if (res.statusCode === 200) {
-          try {
-            const data = JSON.parse(str);
-            resolve(data);
-          } catch (e) {
-            reject(e);
-          }
-        } else {
-          reject(new Error(`Rejected request with status-code: ${res.statusCode}`));
-        }
-      });
+function command(details, command, query) {
+    if (details === void 0) { details = _defaultDetails; }
+    return new Promise(function (resolve, reject) {
+        var address = new URL("http://" + details.address + ":" + details.port + "/requests/status.json?command=" + command + "&" + query);
+        _request(address, details)
+            .then(function (data) {
+        })
+            .catch(reject);
     });
-    req.on('error', err => reject(err));
-  }));
+}
+function _request(address, details) {
+    return new Promise(function (resolve, reject) {
+        var basicAuth = new Buffer.from(":" + details.password)
+            .toString('base64');
+        var str = '';
+        var req = http.get(address, {
+            headers: {
+                'Authorization': "Basic " + basicAuth
+            }
+        }, function (res) {
+            res.on('error', reject);
+            res.on('data', function (data) {
+                str += data;
+            });
+            res.on('end', function () {
+                try {
+                    var data = JSON.parse(str);
+                    resolve(data);
+                }
+                catch (e) {
+                    reject(e);
+                }
+            });
+        });
+        req.on('error', reject);
+    });
+}
+module.exports = {
+    fetch: fetch,
+    command: command,
+    _request: _request,
+    _defaultDetails: _defaultDetails
 };
-module.exports = requester;
