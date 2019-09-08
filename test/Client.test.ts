@@ -1,4 +1,5 @@
-const VLCClient = require('../src/Client');
+const {VLCClient} = require('../src/index.js');
+
 const client = new VLCClient({
     address: '127.0.0.1',
     password: 'rosebud',
@@ -29,4 +30,14 @@ describe('Client', function () {
             "equalizer"
         ]);
     });
+    it('Client.getPlaylist', async () => {
+        const playlist = await client.getPlaylist();
+        expect(Object.keys(playlist)).toEqual([
+            'ro',
+            'type',
+            'name',
+            'id',
+            'children'
+        ])
+    })
 });

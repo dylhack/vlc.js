@@ -1,52 +1,57 @@
 "use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var http = require('http');
-var URL = require('url').URL;
-var Buffer = require('buffer').Buffer;
-var _defaultDetails = {
+var http = __importStar(require("http"));
+var buffer_1 = require("buffer");
+exports._defaultDetails = {
     address: '127.0.0.1',
     password: '',
     port: '8080'
 };
 /**
- * This method is responsible for requesting data structures that VLC provides on their HTTP
- * endpoint. These two data structures are the "status.json" and "playlist.json". For further
- * details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
  * @method fetch
  * @param {Details} details
  * @param {String} file
  * @returns {Promise<VLCStatus | VLCPlaylist>}
+ * @desc This method is responsible for requesting data structures that VLC provides on their HTTP
+ * endpoint. These two data structures are the "status.json" and "playlist.json". For further
+ * details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
  */
 function fetch(details, file) {
-    if (details === void 0) { details = _defaultDetails; }
-    return new Promise(function (resolve, reject) {
-        var address = new URL("http://" + details.address + ":" + details.port + "/requests/" + file);
-        _request(address, details)
-            .then(resolve)
-            .catch(reject);
-    });
+    if (details === void 0) { details = exports._defaultDetails; }
+    var address = "http://" + details.address + ":" + details.port + "/requests/" + file;
+    return _request(address, details);
 }
+exports.fetch = fetch;
 /**
- * This method is responsible for delivering query parameters (aka "commands") to VLC's http
- * endpoint. For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
- * @param {Details} details
- * @param {String} command
- * @param {String} query
- * @returns {Promise<VLCStatus>}
+ * @param details
+ * @param command
+ * @param query
+ * @desc This method is responsible for delivering query parameters (aka "commands") to VLC's http endpoint.
+ * For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
  */
 function command(details, command, query) {
-    if (details === void 0) { details = _defaultDetails; }
-    return new Promise(function (resolve, reject) {
-        var address = new URL("http://" + details.address + ":" + details.port + "/requests/status.json?command=" + command + "&" + query);
-        _request(address, details)
-            .then(function (data) {
-        })
-            .catch(reject);
-    });
+    if (details === void 0) { details = exports._defaultDetails; }
+    if (query === void 0) { query = undefined; }
+    var address = "http://" + details.address + ":" + details.port + "/requests/status.json?command=" + command + "&" + query;
+    return _request(address, details);
 }
+exports.command = command;
+/**
+ * @param address
+ * @param details
+ * @private
+ * @desc This method handles all the http requests with VLC.
+ */
 function _request(address, details) {
     return new Promise(function (resolve, reject) {
-        var basicAuth = new Buffer.from(":" + details.password)
+        var basicAuth = buffer_1.Buffer.from(":" + details.password)
             .toString('base64');
         var str = '';
         var req = http.get(address, {
@@ -71,9 +76,4 @@ function _request(address, details) {
         req.on('error', reject);
     });
 }
-module.exports = {
-    fetch: fetch,
-    command: command,
-    _request: _request,
-    _defaultDetails: _defaultDetails
-};
+exports._request = _request;
