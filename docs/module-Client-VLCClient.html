@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: VLCClient</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="styles/prettify-tomorrow.css" rel="stylesheet" type="text/css">
+    <link href="styles/jsdoc-default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: VLCClient</h1>
+
+
+    <section>
+
+        <header>
+
+            <h2><span class="attribs"><span class="type-signature"></span></span>
+                <span class="ancestors"><a href="module-Client.html">Client</a>~</span>VLCClient<span class="signature">()</span><span
+                        class="type-signature"></span></h2>
+
+
+        </header>
+
+        <article>
+            <div class="container-overview">
+
+
+                <h4 class="name" id="VLCClient"><span class="type-signature"></span>new VLCClient<span
+                        class="signature">()</span><span class="type-signature"></span></h4>
+
+
+                <div class="description">
+                    Promise-oriented VLC Client.
+                </div>
+
+
+                <dl class="details">
+
+
+                    <dt class="tag-source">Source:</dt>
+                    <dd class="tag-source">
+                        <ul class="dummy">
+                            <li>
+                                <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line8">line 8</a>
+                            </li>
+                        </ul>
+                    </dd>
+
+
+                </dl>
+
+
+            </div>
+
+
+            <h3 class="subsection-title">Methods</h3>
+
+
+            <h4 class="name" id="add"><span class="type-signature"></span>add<span class="signature">(mrl)</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Add song based on MRL (media resource locator)
+            </div>
+
+
+            <h5>Parameters:</h5>
+
+
+            <table class="params">
+                <thead>
+                <tr>
+
+                    <th>Name</th>
+
+
+                    <th>Type</th>
+
+
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr>
+
+                    <td class="name"><code>mrl</code></td>
+
+
+                    <td class="type">
+
+
+                        <span class="param-type">String</span>
+
+
+                    </td>
+
+
+                    <td class="description last">media resource locator</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line37">line 37</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="empty"><span class="type-signature"></span>empty<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Clear playlist
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line44">line 44</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="fullscreen"><span class="type-signature"></span>fullscreen<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Toggle fullscreen (pretty useless)
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line51">line 51</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="getPlaylist"><span class="type-signature"></span>getPlaylist<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;VLCPlaylist>}</span>
+            </h4>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line29">line 29</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCPlaylist></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="getStatus"><span class="type-signature"></span>getStatus<span
+                    class="signature">()</span><span class="type-signature"></span></h4>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line23">line 23</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <div class="param-desc">
+                Promise
+                <VLCStatus>
+            </div>
+
+
+            <h4 class="name" id="loop"><span class="type-signature"></span>loop<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Loop playlist
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line58">line 58</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="next"><span class="type-signature"></span>next<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Play next song
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line65">line 65</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="pause"><span class="type-signature"></span>pause<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Pause current song.
+                If used again it will resume the current song
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line73">line 73</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="play"><span class="type-signature"></span>play<span class="signature">(id)</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Play song based on ID
+                If no ID is provided it'll play current song (restart / unpause)
+            </div>
+
+
+            <h5>Parameters:</h5>
+
+
+            <table class="params">
+                <thead>
+                <tr>
+
+                    <th>Name</th>
+
+
+                    <th>Type</th>
+
+
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr>
+
+                    <td class="name"><code>id</code></td>
+
+
+                    <td class="type">
+
+
+                        <span class="param-type">String</span>
+
+
+                    </td>
+
+
+                    <td class="description last"></td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line82">line 82</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="previous"><span class="type-signature"></span>previous<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Play previous song
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line89">line 89</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="remove"><span class="type-signature"></span>remove<span
+                    class="signature">(id)</span><span class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span>
+            </h4>
+
+
+            <div class="description">
+                Remove song based on ID. If an ID isn't provided it'll remove current song
+            </div>
+
+
+            <h5>Parameters:</h5>
+
+
+            <table class="params">
+                <thead>
+                <tr>
+
+                    <th>Name</th>
+
+
+                    <th>Type</th>
+
+
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr>
+
+                    <td class="name"><code>id</code></td>
+
+
+                    <td class="type">
+
+
+                        <span class="param-type">String</span>
+
+
+                    </td>
+
+
+                    <td class="description last"></td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line97">line 97</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="repeat"><span class="type-signature"></span>repeat<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Repeat the current song
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line104">line 104</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="shuffle"><span class="type-signature"></span>shuffle<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span></h4>
+
+
+            <div class="description">
+                Shuffle playlist
+            </div>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line111">line 111</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+            <h4 class="name" id="volume"><span class="type-signature"></span>volume<span
+                    class="signature">(value)</span><span class="type-signature"> &rarr; {Promise.&lt;VLCStatus>}</span>
+            </h4>
+
+
+            <div class="description">
+                Set volume
+            </div>
+
+
+            <h5>Parameters:</h5>
+
+
+            <table class="params">
+                <thead>
+                <tr>
+
+                    <th>Name</th>
+
+
+                    <th>Type</th>
+
+
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr>
+
+                    <td class="name"><code>value</code></td>
+
+
+                    <td class="type">
+
+
+                        <span class="param-type">Number</span>
+
+
+                    </td>
+
+
+                    <td class="description last"></td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+            <dl class="details">
+
+
+                <dt class="tag-source">Source:</dt>
+                <dd class="tag-source">
+                    <ul class="dummy">
+                        <li>
+                            <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line119">line 119</a>
+                        </li>
+                    </ul>
+                </dd>
+
+
+            </dl>
+
+
+            <h5>Returns:</h5>
+
+
+            <dl>
+                <dt>
+                    Type
+                </dt>
+                <dd>
+
+                    <span class="param-type">Promise.&lt;VLCStatus></span>
+
+
+                </dd>
+            </dl>
+
+
+        </article>
+
+    </section>
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2>
+    <h3>Modules</h3>
+    <ul>
+        <li><a href="module-Client.html">Client</a></li>
+        <li><a href="module-Requester.html">Requester</a></li>
+    </ul>
+    <h3>Classes</h3>
+    <ul>
+        <li><a href="module-Client-VLCClient.html">VLCClient</a></li>
+    </ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Sep 09 2019 14:27:39
+    GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

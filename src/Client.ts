@@ -1,31 +1,34 @@
+/**
+ * @module Client
+ * @author dylhack
+ */
+
 import {Details, VLCPlaylist, VLCStatus} from "./index";
 import {command, fetch} from "./Requester"
 
 /**
  * @class VLCClient
- * @constructor
- * @param {Details} details
- * @desc Promise-oriented VLC Client. This Client uses everything in src/commands & src/routes.
- * Every command resolves with VLC's status.json. All the actual communication with VLC is done in
- * src/workers
+ * @description Promise-oriented VLC Client.
  */
 export class VLCClient {
     private readonly details: Details;
 
+    /**
+     * @constructor
+     * @param details
+     */
     constructor(details: Details) {
         this.details = details;
     }
 
     /**
-     * @method getStatus
-     * @return {Promise<VLCStatus>}
+     * @returns Promise<VLCStatus>
      */
     getStatus(): Promise<VLCStatus> {
         return fetch(this.details, 'status.json')
     }
 
     /**
-     * @method getPlaylist
      * @return {Promise<VLCPlaylist>}
      */
     getPlaylist(): Promise<VLCPlaylist> {
@@ -33,7 +36,6 @@ export class VLCClient {
     }
 
     /**
-     * @method add
      * @param {String} mrl media resource locator
      * @returns {Promise<VLCStatus>}
      * @desc Add song based on MRL (media resource locator)
@@ -43,7 +45,6 @@ export class VLCClient {
     }
 
     /**
-     * @method empty
      * @desc Clear playlist
      * @returns {Promise<VLCStatus>}
      */
@@ -52,7 +53,6 @@ export class VLCClient {
     }
 
     /**
-     * @method fullscreen
      * @desc Toggle fullscreen (pretty useless)
      * @returns {Promise<VLCStatus>}
      */
@@ -61,7 +61,6 @@ export class VLCClient {
     }
 
     /**
-     * @method loop
      * @desc Loop playlist
      * @returns {Promise<VLCStatus>}
      */
@@ -70,7 +69,6 @@ export class VLCClient {
     }
 
     /**
-     * @method next
      * @desc Play next song
      * @returns {Promise<VLCStatus>}
      */
@@ -79,7 +77,6 @@ export class VLCClient {
     }
 
     /**
-     * @method pause
      * @returns {Promise<VLCStatus>}
      * @desc Pause current song.
      * If used again it will resume the current song
@@ -89,7 +86,6 @@ export class VLCClient {
     }
 
     /**
-     * @method play
      * @param {String} id
      * @returns {Promise<VLCStatus>}
      * @desc Play song based on ID
@@ -100,7 +96,6 @@ export class VLCClient {
     }
 
     /**
-     * @method previous
      * @desc Play previous song
      * @returns {Promise<VLCStatus>}
      */
@@ -109,7 +104,6 @@ export class VLCClient {
     }
 
     /**
-     * @method remove
      * @desc Remove song based on ID. If an ID isn't provided it'll remove current song
      * @param {String} id
      * @returns {Promise<VLCStatus>}
@@ -119,7 +113,6 @@ export class VLCClient {
     }
 
     /**
-     * @method repeat
      * @desc Repeat the current song
      * @returns {Promise<VLCStatus>}
      */
@@ -128,7 +121,6 @@ export class VLCClient {
     }
 
     /**
-     * @method shuffle
      * @desc Shuffle playlist
      * @returns {Promise<VLCStatus>}
      */
@@ -137,7 +129,6 @@ export class VLCClient {
     }
 
     /**
-     * @method volume
      * @desc Set volume
      * @param {Number} value
      * @returns {Promise<VLCStatus>}

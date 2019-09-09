@@ -1,3 +1,7 @@
+/**
+ * @module Requester
+ * @author dylhack
+ */
 import * as http from 'http';
 import {IncomingMessage} from 'http';
 import {Buffer} from 'buffer';
@@ -10,13 +14,13 @@ export const _defaultDetails: Details = {
 };
 
 /**
- * @method fetch
+ * @function fetch
  * @param {Details} details
  * @param {String} file
  * @returns {Promise<VLCStatus | VLCPlaylist>}
- * @desc This method is responsible for requesting data structures that VLC provides on their HTTP
- * endpoint. These two data structures are the "status.json" and "playlist.json". For further
- * details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
+ * @description This function is responsible for requesting data structures that VLC provides on their HTTP endpoint.
+ * These two data structures are the "status.json" and "playlist.json". For further details see the provided link
+ * https://wiki.videolan.org/VLC_HTTP_requests
  */
 export function fetch(details = _defaultDetails, file: string): Promise<any> {
     const address = `http://${details.address}:${details.port}/requests/${file}`;
@@ -24,10 +28,11 @@ export function fetch(details = _defaultDetails, file: string): Promise<any> {
 }
 
 /**
+ * @function command
  * @param details
  * @param command
  * @param query
- * @desc This method is responsible for delivering query parameters (aka "commands") to VLC's http endpoint.
+ * @description This function is responsible for delivering query parameters (aka "commands") to VLC's http endpoint.
  * For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
  */
 export function command(details = _defaultDetails, command: string, query: string | undefined = undefined): Promise<VLCStatus> {
@@ -36,10 +41,12 @@ export function command(details = _defaultDetails, command: string, query: strin
 }
 
 /**
+ * @function _request
  * @param address
  * @param details
+ * @returns {Promise<any>}
  * @private
- * @desc This method handles all the http requests with VLC.
+ * @description This method handles all the http requests with VLC.
  */
 export function _request(address: string, details: Details): Promise<any> {
     return new Promise((resolve, reject) => {
