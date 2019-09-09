@@ -1,234 +1,124 @@
+"use strict";
 /**
  * @module Client
  * @author dylhack
- * @requires CommandHandler
- * @requires DataHandler
- * @desc Promise-oriented VLC Client. This Client uses everything in src/commands & src/routes.
- * Every command resolves with VLC's status.json. All the actual communication with VLC is done in
- * src/workers
  */
-const command = require('./CommandHandler.js');
-const request = require('./DataHandler.js');
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var Requester_1 = require("./Requester");
 /**
- * @class Client
- * @constructor
- * @param {Details} details
- * @example
- * const client = new Client({
- *  password: 'rosebud',
- *  port: 9090
- * });
- * client.getStatus()
- * .then((status) => {
- *  console.log("Got the status! ", status);
- * });
+ * @class VLCClient
+ * @description Promise-oriented VLC Client.
  */
-module.exports = class Client {
-  constructor(details) {
-    this.details = details;
-  }
-
-  /**
-   * @method getStatus
-   * @return {Promise<Status>}
-   */
-  getStatus() {
-    return new Promise((res, rej) => {
-      request(this.details, 'status.json', (err, data) => {
-        if (err) rej(err);
-        else res(data);
-      });
-    });
-  }
-
-  /**
-   * @method getPlaylist
-   * @return {Promise<Playlist>}
-   */
-  getPlaylist() {
-    return new Promise((res, rej) => {
-      request(this.details, 'playlist.json', (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method add
-   * @param {String} mrl media resource locator
-   * @returns {Promise<Status>}
-   * @desc Add song based on MRL (media resource locator)
-   */
-  add(mrl) {
-    return new Promise((res, rej) => {
-      if (mrl) {
-        command(this.details, 'in_enqueue', mrl, (err, data) => {
-          rej(err);
-          res(data);
-        });
-      } else rej(new Error('Did not provide a MRL'));
-    });
-  }
-
-  /**
-   * @method empty
-   * @desc Clear playlist
-   * @returns {Promise<Status>}
-   */
-  empty() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_empty', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method fullscreen
-   * @desc Toggle fullscreen (pretty useless)
-   * @returns {Promise<Status>}
-   */
-  fullscreen() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_fullscreen', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method loop
-   * @desc Loop playlist
-   * @returns {Promise<Status>}
-   */
-  loop() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_loop', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method next
-   * @desc Play next song
-   * @returns {Promise<Status>}
-   */
-  next() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_next', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method pause
-   * @desc Pause current song.
-   * If used again it will resume the current song
-   * @returns {Promise<Status>}
-   */
-  pause() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_pause', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method play
-   * @desc Play song based on ID
-   * If no ID is provided it'll play current song (restart / unpause)
-   * @param {String} id
-   * @returns {Promise<Status>}
-   */
-  play(id) {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_play', id, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method previous
-   * @desc Play previous song
-   * @returns {Promise<Status>}
-   */
-  previous() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_previous', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method remove
-   * @desc Remove song based on ID
-     If an ID is provided it'll remove current song
-   * @param {String} id
-   * @returns {Promise<Status>}
-   */
-  remove(id) {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_delete', id, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method repeat
-   * @desc Repeat the current song
-   * @returns {Promise<Status>}
-   */
-  repeat() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_repeat', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method shuffle
-   * @desc Shuffle playlist
-   * @returns {Promise<Status>}
-   */
-  shuffle() {
-    return new Promise((res, rej) => {
-      command(this.details, 'pl_random', undefined, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-
-  /**
-   * @method volume
-   * @desc Set volume
-   * @param {Number} value
-   * @returns {Promise<Status>}
-   */
-  volume(value) {
-    return new Promise((res, rej) => {
-      command(this.details, 'volume', value, (err, data) => {
-        rej(err);
-        res(data);
-      });
-    });
-  }
-};
+var VLCClient = /** @class */ (function () {
+    /**
+     * @constructor
+     * @param details
+     */
+    function VLCClient(details) {
+        this.details = details;
+    }
+    /**
+     * @returns Promise<VLCStatus>
+     */
+    VLCClient.prototype.getStatus = function () {
+        return Requester_1.fetch(this.details, 'status.json');
+    };
+    /**
+     * @return {Promise<VLCPlaylist>}
+     */
+    VLCClient.prototype.getPlaylist = function () {
+        return Requester_1.fetch(this.details, 'playlist.json');
+    };
+    /**
+     * @param {String} mrl media resource locator
+     * @returns {Promise<VLCStatus>}
+     * @desc Add song based on MRL (media resource locator)
+     */
+    VLCClient.prototype.add = function (mrl) {
+        return Requester_1.command(this.details, 'in_enqueue', mrl);
+    };
+    /**
+     * @desc Clear playlist
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.empty = function () {
+        return Requester_1.command(this.details, 'pl_empty');
+    };
+    /**
+     * @desc Toggle fullscreen (pretty useless)
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.fullscreen = function () {
+        return Requester_1.command(this.details, 'pl_fullscreen');
+    };
+    /**
+     * @desc Loop playlist
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.loop = function () {
+        return Requester_1.command(this.details, 'pl_loop');
+    };
+    /**
+     * @desc Play next song
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.next = function () {
+        return Requester_1.command(this.details, 'pl_next');
+    };
+    /**
+     * @returns {Promise<VLCStatus>}
+     * @desc Pause current song.
+     * If used again it will resume the current song
+     */
+    VLCClient.prototype.pause = function () {
+        return Requester_1.command(this.details, 'pl_pause');
+    };
+    /**
+     * @param {String} id
+     * @returns {Promise<VLCStatus>}
+     * @desc Play song based on ID
+     * If no ID is provided it'll play current song (restart / unpause)
+     */
+    VLCClient.prototype.play = function (id) {
+        return Requester_1.command(this.details, 'pl_play', id);
+    };
+    /**
+     * @desc Play previous song
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.previous = function () {
+        return Requester_1.command(this.details, 'pl_previous');
+    };
+    /**
+     * @desc Remove song based on ID. If an ID isn't provided it'll remove current song
+     * @param {String} id
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.remove = function (id) {
+        return Requester_1.command(this.details, 'pl_delete', id);
+    };
+    /**
+     * @desc Repeat the current song
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.repeat = function () {
+        return Requester_1.command(this.details, 'pl_repeat');
+    };
+    /**
+     * @desc Shuffle playlist
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.shuffle = function () {
+        return Requester_1.command(this.details, 'pl_random');
+    };
+    /**
+     * @desc Set volume
+     * @param {Number} value
+     * @returns {Promise<VLCStatus>}
+     */
+    VLCClient.prototype.volume = function (value) {
+        return Requester_1.command(this.details, 'volume', value.toString());
+    };
+    return VLCClient;
+}());
+exports.VLCClient = VLCClient;
