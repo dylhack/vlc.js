@@ -1,4 +1,5 @@
-import { VLCRequest } from "./VLCRequest";
+import {VLCRequest} from "./VLCRequest";
+
 /**
  * @class VLCStatus
  * @description Current status about VLC.
@@ -99,6 +100,7 @@ export interface Meta {
     album: string | undefined;
     track_number: string | undefined;
     filename: string;
+    now_playing: string | undefined;
     publisher: string | undefined;
     copyright: string | undefined;
     artist: string | undefined;

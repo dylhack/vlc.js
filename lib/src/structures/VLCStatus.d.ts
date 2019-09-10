@@ -26,7 +26,7 @@ export declare class VLCStatus {
     readonly information: Information | undefined;
     readonly repeat: boolean;
     readonly subtitledelay: number;
-    readonly equalizer: VLCEqualizer[];
+    readonly equalizer: Equalizer[];
     /**
      * @constructor
      * @param {VLCRequest} vlcRequest
@@ -45,6 +45,35 @@ export interface AudioFilters {
     filter_2: string | undefined;
     filter_3: string | undefined;
     filter_4: string | undefined;
+}
+
+export interface Equalizer {
+    presets: Presets;
+    bands: {
+        [key: string]: number;
+    };
+    preamp: number;
+}
+
+export interface Presets {
+    "preset id=\"8\"": string | undefined;
+    "preset id=\"4\"": string | undefined;
+    "preset id=\"17\"": string | undefined;
+    "preset id=\"10\"": string | undefined;
+    "preset id=\"9\"": string | undefined;
+    "preset id=\"15\"": string | undefined;
+    "preset id=\"14\"": string | undefined;
+    "preset id=\"16\"": string | undefined;
+    "preset id=\"11\"": string | undefined;
+    "preset id=\"13\"": string | undefined;
+    "preset id=\"5\"": string | undefined;
+    "preset id=\"7\"": string | undefined;
+    "preset id=\"12\"": string | undefined;
+    "preset id=\"2\"": string | undefined;
+    "preset id=\"6\"": string | undefined;
+    "preset id=\"3\"": string | undefined;
+    "preset id=\"1\"": string | undefined;
+    "preset id=\"0\"": string | undefined;
 }
 export interface Information {
     chapter: number;
@@ -85,8 +114,5 @@ export interface VideoEffects {
     contrast: number;
     brightness: number;
     gamma: number;
-}
-export interface VLCEqualizer {
-    preamp: number;
 }
 //# sourceMappingURL=VLCStatus.d.ts.map

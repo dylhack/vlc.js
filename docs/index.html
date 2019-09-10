@@ -64,19 +64,14 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-                <p><img alt="Banner" src="GitHub%20Banner2.png"></p>
-                <hr>
-                <p>VLC HTTP endpoint wrapper for NodeJS developers. All documentation can be found in the <a
-                        href="./docs/index.html">docs</a> directory.</p>
-                <a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
-                    <h2>Example Usage</h2>
-                </a>
-                <pre><code class="language-javascript"><span class="hljs-keyword">const</span> vlc = <span
-                        class="hljs-built_in">require</span>(<span class="hljs-string">'vlc.js'</span>)
-<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> vlc.VLCClient({ <span
-                            class="hljs-attr">address</span>: <span class="hljs-string">'127.0.0.1'</span>, <span
-                            class="hljs-attr">password</span>: <span class="hljs-string">'rosebud'</span>, <span
-                            class="hljs-attr">port</span>: <span class="hljs-number">8080</span>})
+				<p><img src="GitHub%20Banner2.png" alt="Banner"></p>
+				<hr>
+				<p>VLC HTTP endpoint wrapper for NodeJS developers. All documentation can be found in the <a href="./docs/index.html">docs</a> directory.</p>
+				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+					<h2>Example Usage</h2>
+				</a>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> vlc = <span class="hljs-built_in">require</span>(<span class="hljs-string">'vlc.js'</span>);
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> vlc.VLCClient({ <span class="hljs-attr">address</span>: <span class="hljs-string">'127.0.0.1'</span>, <span class="hljs-attr">password</span>: <span class="hljs-string">'rosebud'</span>, <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>});
 client.getStatus()
     .then(<span class="hljs-function">(<span class="hljs-params">status</span>) =&gt;</span> {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Status of the VLC'</span>, status)
