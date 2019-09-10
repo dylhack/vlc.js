@@ -21,12 +21,10 @@ describe('Client', function () {
     });
 
     it('add', async () => {
-        // http://ytcracker.com/music/categoryFive - kilobyte.mp3
-        // http://ytcracker.com/music/categoryFive%20-%20kilobyte.mp3
         await client.add(encodeURI('http://ytcracker.com/music/categoryFive - kilobyte.mp3'), true);
         const status = await client.getStatus();
         if (status.information != undefined) {
-            expect(status.information.category.meta.filename).toBe('categoryFive%20-%20kilobyte.mp3');
+            expect(status.information.category.meta.filename).toBe('categoryFive - kilobyte.mp3');
         }
     }, 5000);
 
@@ -34,7 +32,7 @@ describe('Client', function () {
         await client.empty();
         const status = await client.getStatus();
         expect(status.information).toBe(undefined)
-    });
+    }, 5000);
 
     it('fullscreen', async () => {
         await client.add('mrl', true);
