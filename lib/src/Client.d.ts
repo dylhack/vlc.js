@@ -2,9 +2,10 @@
  * @module Client
  * @author dylhack
  */
-import { VLCCommand, VLCCredentials } from "./Requester";
-import { VLCStatus } from "./structures/VLCStatus";
-import { VLCPlaylist } from "./structures/VLCPlaylist";
+import {VLCCommand, VLCCredentials} from "./Requester";
+import {VLCStatus} from "./structures/VLCStatus";
+import {VLCPlaylist} from "./structures/VLCPlaylist";
+
 /**
  * @class VLCClient
  * @description Promise-oriented VLC HTTP endpoint Client.

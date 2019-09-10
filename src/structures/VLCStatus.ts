@@ -24,7 +24,7 @@ export class VLCStatus {
     public readonly information: Information | undefined;
     public readonly repeat: boolean;
     public readonly subtitledelay: number;
-    public readonly equalizer: VLCEqualizer[];
+    public readonly equalizer: Equalizer[];
 
     /**
      * @constructor
@@ -69,7 +69,33 @@ export interface AudioFilters {
     filter_2: string | undefined;
     filter_3: string | undefined;
     filter_4: string | undefined;
+}
 
+export interface Equalizer {
+    presets: Presets;
+    bands: { [key: string]: number };
+    preamp: number;
+}
+
+export interface Presets {
+    "preset id=\"8\"": string | undefined;
+    "preset id=\"4\"": string | undefined;
+    "preset id=\"17\"": string | undefined;
+    "preset id=\"10\"": string | undefined;
+    "preset id=\"9\"": string | undefined;
+    "preset id=\"15\"": string | undefined;
+    "preset id=\"14\"": string | undefined;
+    "preset id=\"16\"": string | undefined;
+    "preset id=\"11\"": string | undefined;
+    "preset id=\"13\"": string | undefined;
+    "preset id=\"5\"": string | undefined;
+    "preset id=\"7\"": string | undefined;
+    "preset id=\"12\"": string | undefined;
+    "preset id=\"2\"": string | undefined;
+    "preset id=\"6\"": string | undefined;
+    "preset id=\"3\"": string | undefined;
+    "preset id=\"1\"": string | undefined;
+    "preset id=\"0\"": string | undefined;
 }
 
 export interface Information {
@@ -95,7 +121,18 @@ export interface Stream0 {
 }
 
 export interface Meta {
+    description: string | undefined;
+    date: string | undefined;
+    genre: string | undefined;
+    track_total: string | undefined;
+    album: string | undefined;
+    track_number: string | undefined;
     filename: string;
+    publisher: string | undefined;
+    copyright: string | undefined;
+    artist: string | undefined;
+    language: string | undefined;
+    title: string | undefined;
 }
 
 export interface VideoEffects {
@@ -104,8 +141,4 @@ export interface VideoEffects {
     contrast: number;
     brightness: number;
     gamma: number;
-}
-
-export interface VLCEqualizer {
-    preamp: number;
 }

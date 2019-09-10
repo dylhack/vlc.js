@@ -30,42 +30,6 @@ export interface VLCCredentials {
  * @description These are all the available commands that the HTTP server can take. These commands were pulled from the
  * source code and was last updated September 10th, 2019.
  * @link https://github.com/videolan/vlc/blob/master/share/lua/intf/modules/httprequests.lua
- * @property {String} in_play
- * @property {String} addsubtitle
- * @property {String} in_enqueue
- * @property {String} pl_play
- * @property {String} pl_pause
- * @property {String} pl_forcepause
- * @property {String} pl_forceresume
- * @property {String} pl_stop
- * @property {String} pl_next
- * @property {String} pl_previous
- * @property {String} pl_delete
- * @property {String} pl_empty
- * @property {String} pl_sort
- * @property {String} pl_random
- * @property {String} pl_loop
- * @property {String} pl_repeat
- * @property {String} pl_sd_add
- * @property {String} pl_sd_remove
- * @property {String} fullscreen
- * @property {String} snapshot
- * @property {String} volume
- * @property {String} seek
- * @property {String} key
- * @property {String} audiodelay
- * @property {String} rate
- * @property {String} subdelay
- * @property {String} aspectratio
- * @property {String} preamp
- * @property {String} equalizer
- * @property {String} enableeq
- * @property {String} setpreset
- * @property {String} title
- * @property {String} chapter
- * @property {String} audio_track
- * @property {String} video_track
- * @property {String} subtitle_track
  */
 export const enum VLCCommand {
     in_play = 'in_play',

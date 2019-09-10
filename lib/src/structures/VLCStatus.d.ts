@@ -1,4 +1,5 @@
-import { VLCRequest } from "./VLCRequest";
+import {VLCRequest} from "./VLCRequest";
+
 /**
  * @class VLCStatus
  * @description Current status about VLC.
@@ -65,7 +66,18 @@ export interface Stream0 {
     Sample_rate: string;
 }
 export interface Meta {
+    description: string | undefined;
+    date: string | undefined;
+    genre: string | undefined;
+    track_total: string | undefined;
+    album: string | undefined;
+    track_number: string | undefined;
     filename: string;
+    publisher: string | undefined;
+    copyright: string | undefined;
+    artist: string | undefined;
+    language: string | undefined;
+    title: string | undefined;
 }
 export interface VideoEffects {
     hue: number;

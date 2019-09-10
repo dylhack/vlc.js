@@ -1,5 +1,6 @@
 /// <reference types="node" />
-import { ClientRequest, IncomingMessage } from "http";
+import {ClientRequest, IncomingMessage} from "http";
+
 /**
  * @class VLCRequest
  * @description This class stores all the data about a completed request with VLCs' HTTP server.

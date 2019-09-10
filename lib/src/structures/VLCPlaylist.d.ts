@@ -1,4 +1,5 @@
-import { VLCRequest } from "./VLCRequest";
+import {VLCRequest} from "./VLCRequest";
+
 /**
  * @class VLCPlaylist
  */
