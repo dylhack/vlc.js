@@ -1,11 +1,60 @@
 import { VLCStatus } from "./structures/VLCStatus";
 import { VLCRequest } from "./structures/VLCRequest";
 import { VLCPlaylist } from "./structures/VLCPlaylist";
-export interface Details {
+/**
+ * @interface VLCCredentials
+ * @property {String} address
+ * @property {String} password
+ * @property {String|Number} port
+ * @description This is standard login credentials for accessing VLCs' HTTP endpoint.
+ */
+export interface VLCCredentials {
     address: string;
     password: string;
     port: number | string;
 }
+/**
+ * @enum VLCCommand
+ * @description These are all the available commands that the HTTP server can take. These commands were pulled from the
+ * source code and was last updated September 10th, 2019.
+ * @link https://github.com/videolan/vlc/blob/master/share/lua/intf/modules/httprequests.lua
+ * @property {String} in_play
+ * @property {String} addsubtitle
+ * @property {String} in_enqueue
+ * @property {String} pl_play
+ * @property {String} pl_pause
+ * @property {String} pl_forcepause
+ * @property {String} pl_forceresume
+ * @property {String} pl_stop
+ * @property {String} pl_next
+ * @property {String} pl_previous
+ * @property {String} pl_delete
+ * @property {String} pl_empty
+ * @property {String} pl_sort
+ * @property {String} pl_random
+ * @property {String} pl_loop
+ * @property {String} pl_repeat
+ * @property {String} pl_sd_add
+ * @property {String} pl_sd_remove
+ * @property {String} fullscreen
+ * @property {String} snapshot
+ * @property {String} volume
+ * @property {String} seek
+ * @property {String} key
+ * @property {String} audiodelay
+ * @property {String} rate
+ * @property {String} subdelay
+ * @property {String} aspectratio
+ * @property {String} preamp
+ * @property {String} equalizer
+ * @property {String} enableeq
+ * @property {String} setpreset
+ * @property {String} title
+ * @property {String} chapter
+ * @property {String} audio_track
+ * @property {String} video_track
+ * @property {String} subtitle_track
+ */
 export declare const enum VLCCommand {
     in_play = "in_play",
     addsubtitle = "addsubtitle",
@@ -45,13 +94,27 @@ export declare const enum VLCCommand {
     subtitle_track = "subtitle_track"
 }
 /**
- * @param details
- * @param vlcCommand
- * @param query
+ * @param {VLCCredentials} details
+ * @param {VLCCommand} vlcCommand
+ * @param {String[]} query
  * @returns {Promise<VLCStatus>}
  */
-export declare function command(details: Details, vlcCommand: VLCCommand, query?: string[] | undefined): Promise<VLCStatus>;
-export declare function getStatus(details: Details): Promise<VLCStatus>;
-export declare function getPlaylist(details: Details): Promise<VLCPlaylist>;
-export declare function _request(address: URL, details: Details): Promise<VLCRequest>;
+export declare function command(details: VLCCredentials, vlcCommand: VLCCommand, query?: string[] | undefined): Promise<VLCStatus>;
+/**
+ * @param {VLCCredentials} details
+ * @returns {Promise<VLCStatus>}
+ */
+export declare function getStatus(details: VLCCredentials): Promise<VLCStatus>;
+/**
+ * @param {VLCCredentials} details
+ * @returns {Promise<VLCPlaylist>}
+ */
+export declare function getPlaylist(details: VLCCredentials): Promise<VLCPlaylist>;
+/**
+ * @param {URL} address
+ * @param {VLCCredentials} details
+ * @returns {VLCRequest}
+ * @private
+ */
+export declare function _request(address: URL, details: VLCCredentials): Promise<VLCRequest>;
 //# sourceMappingURL=Requester.d.ts.map

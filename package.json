@@ -10,7 +10,7 @@
   "scripts": {
     "test": "tsc && jest ./test/",
     "prepublish": "tsc",
-    "docs": "./node_modules/.bin/jsdoc -r ./src/ -d ./docs/"
+    "docs": "npx typedoc --out .\\docs .\\src"
   },
   "repository": {
     "type": "git",

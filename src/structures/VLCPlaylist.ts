@@ -1,5 +1,8 @@
 import {VLCRequest} from "./VLCRequest";
 
+/**
+ * @class VLCPlaylist
+ */
 export class VLCPlaylist {
     public ro: string;
     public type: string;
@@ -8,6 +11,10 @@ export class VLCPlaylist {
     public children: VLCPlaylistChild[];
     public request: VLCRequest;
 
+    /**
+     * @constructor
+     * @param {VLCRequest} request
+     */
     constructor(request: VLCRequest) {
         const parsed = JSON.parse(request.data.toString());
 

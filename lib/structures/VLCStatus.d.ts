@@ -1,28 +1,35 @@
 import { VLCRequest } from "./VLCRequest";
+/**
+ * @class VLCStatus
+ * @description Current status about VLC.
+ */
 export declare class VLCStatus {
-    fullscreen: boolean;
-    stats: {
+    readonly fullscreen: boolean;
+    readonly stats: {
         [key: string]: number;
     } | undefined;
-    audiodelay: number;
-    apiversion: number;
-    currentplid: number;
-    time: number;
-    volume: number;
-    length: number;
-    random: boolean;
-    audiofilters: AudioFilters;
-    rate: number;
-    videoeffects: VideoEffects;
-    state: VLCPlaylistStatus;
-    loop: boolean;
-    version: string;
-    position: number;
-    information: Information | undefined;
-    repeat: boolean;
-    subtitledelay: number;
-    equalizer: any[];
-    request: VLCRequest;
+    readonly audiodelay: number;
+    readonly apiversion: number;
+    readonly currentplid: number;
+    readonly time: number;
+    readonly volume: number;
+    readonly length: number;
+    readonly random: boolean;
+    readonly audiofilters: AudioFilters;
+    readonly rate: number;
+    readonly videoeffects: VideoEffects;
+    readonly state: VLCPlaylistStatus;
+    readonly loop: boolean;
+    readonly version: string;
+    readonly position: number;
+    readonly information: Information | undefined;
+    readonly repeat: boolean;
+    readonly subtitledelay: number;
+    readonly equalizer: VLCEqualizer[];
+    /**
+     * @constructor
+     * @param {VLCRequest} vlcRequest
+     */
     constructor(vlcRequest: VLCRequest);
 }
 export declare enum VLCPlaylistStatus {
@@ -32,7 +39,11 @@ export declare enum VLCPlaylistStatus {
     unknown = "unknown"
 }
 export interface AudioFilters {
-    filter_0: string;
+    filter_0: string | undefined;
+    filter_1: string | undefined;
+    filter_2: string | undefined;
+    filter_3: string | undefined;
+    filter_4: string | undefined;
 }
 export interface Information {
     chapter: number;
@@ -62,5 +73,8 @@ export interface VideoEffects {
     contrast: number;
     brightness: number;
     gamma: number;
+}
+export interface VLCEqualizer {
+    preamp: number;
 }
 //# sourceMappingURL=VLCStatus.d.ts.map

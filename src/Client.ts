@@ -2,27 +2,27 @@
  * @module Client
  * @author dylhack
  */
-import {command, Details, getPlaylist, getStatus, VLCCommand} from "./Requester"
+import {command, getPlaylist, getStatus, VLCCommand, VLCCredentials} from "./Requester"
 import {VLCPlaylistStatus, VLCStatus} from "./structures/VLCStatus";
 import {VLCPlaylist} from "./structures/VLCPlaylist";
 
 /**
  * @class VLCClient
- * @description Promise-oriented VLC Client.
+ * @description Promise-oriented VLC HTTP endpoint Client.
  */
 export class VLCClient {
-    private readonly details: Details;
+    private readonly details: VLCCredentials;
 
     /**
      * @constructor
-     * @param details
+     * @param {VLCCredentials} details
      */
-    constructor(details: Details) {
+    constructor(details: VLCCredentials) {
         this.details = details;
     }
 
     /**
-     * @returns Promise<VLCStatus>
+     * @returns {Promise<VLCStatus>}
      */
     getStatus(): Promise<VLCStatus> {
         return getStatus(this.details)
@@ -36,17 +36,18 @@ export class VLCClient {
     }
 
     /**
+     * @description Add song based on MRL (media resource locator)
+     * @link https://wiki.videolan.org/Media_resource_locator/
      * @param {String} mrl media resource locator
      * @param {Boolean|undefined} play Play the added media
      * @returns {Promise<VLCStatus>}
-     * @desc Add song based on MRL (media resource locator) https://wiki.videolan.org/Media_resource_locator/
      */
     add(mrl: string, play: boolean | undefined = undefined): Promise<VLCStatus> {
         return command(this.details, play ? VLCCommand.in_play : VLCCommand.in_enqueue, [`input=${mrl}`]);
     }
 
     /**
-     * @desc Clear playlist
+     * @description Clear playlist
      * @returns {Promise<VLCStatus>}
      */
     empty(): Promise<VLCStatus> {
@@ -54,7 +55,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Toggle fullscreen (pretty useless)
+     * @description Toggle fullscreen (pretty useless)
      * @returns {Promise<VLCStatus>}
      */
     async fullscreen(isFullscreen: boolean): Promise<VLCStatus> {
@@ -65,7 +66,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Loop playlist
+     * @description Loop playlist
      * @returns {Promise<VLCStatus>}
      */
     async loop(isLoop: boolean): Promise<VLCStatus> {
@@ -76,7 +77,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Play next song
+     * @description Play next song
      * @returns {Promise<VLCStatus>}
      */
     next(): Promise<VLCStatus> {
@@ -84,9 +85,8 @@ export class VLCClient {
     }
 
     /**
+     * @description Pause current song
      * @returns {Promise<VLCStatus>}
-     * @desc Pause current song.
-     * If used again it will resume the current song
      */
     async pause(isPaused: true): Promise<VLCStatus> {
         const status = await this.getStatus();
@@ -98,17 +98,16 @@ export class VLCClient {
     }
 
     /**
+     * @description Play song based on ID If no ID is provided it'll play current song (restart / unpause)
      * @param {String} id
      * @returns {Promise<VLCStatus>}
-     * @desc Play song based on ID
-     * If no ID is provided it'll play current song (restart / unpause)
      */
     play(id: string): Promise<VLCStatus> {
         return command(this.details, VLCCommand.pl_play, [`id=${id}`])
     }
 
     /**
-     * @desc Play previous song
+     * @description Play previous song
      * @returns {Promise<VLCStatus>}
      */
     previous(): Promise<VLCStatus> {
@@ -116,7 +115,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Remove song based on ID. If an ID isn't provided it'll remove current song
+     * @description Remove song based on ID. If an ID isn't provided it'll remove current song
      * @param {String} id
      * @returns {Promise<VLCStatus>}
      */
@@ -125,7 +124,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Repeat the current song
+     * @description Repeat the current song
      * @returns {Promise<VLCStatus>}
      */
     async repeat(isRepeat: boolean): Promise<VLCStatus> {
@@ -136,7 +135,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Shuffle playlist
+     * @description Randomize the playlist
      * @returns {Promise<VLCStatus>}
      */
     async random(isRandom: boolean): Promise<VLCStatus> {
@@ -147,7 +146,7 @@ export class VLCClient {
     }
 
     /**
-     * @desc Set volume
+     * @description Set volume
      * @param {Number|String} value
      * @returns {Promise<VLCStatus>}
      */
@@ -155,6 +154,11 @@ export class VLCClient {
         return command(this.details, VLCCommand.volume, [`val=${value}`])
     }
 
+    /**
+     * @description Execute a VLC HTTP endpoint command
+     * @param {VLCCommand} vlcCommand
+     * @param {String[] | undefined} query
+     */
     command(vlcCommand: VLCCommand, query: string[] | undefined = undefined): Promise<VLCStatus> {
         return command(this.details, vlcCommand, query)
     }

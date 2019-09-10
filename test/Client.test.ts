@@ -28,7 +28,7 @@ describe('Client', function () {
         if (status.information != undefined) {
             expect(status.information.category.meta.filename).toBe('categoryFive%20-%20kilobyte.mp3');
         }
-    });
+    }, 5000);
 
     it('empty', async () => {
         await client.empty();

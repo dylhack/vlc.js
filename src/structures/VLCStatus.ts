@@ -1,28 +1,35 @@
 import {VLCRequest} from "./VLCRequest";
 
+/**
+ * @class VLCStatus
+ * @description Current status about VLC.
+ */
 export class VLCStatus {
-    public fullscreen: boolean;
-    public stats: { [key: string]: number } | undefined;
-    public audiodelay: number;
-    public apiversion: number;
-    public currentplid: number;
-    public time: number;
-    public volume: number;
-    public length: number;
-    public random: boolean;
-    public audiofilters: AudioFilters;
-    public rate: number;
-    public videoeffects: VideoEffects;
-    public state: VLCPlaylistStatus;
-    public loop: boolean;
-    public version: string;
-    public position: number;
-    public information: Information | undefined;
-    public repeat: boolean;
-    public subtitledelay: number;
-    public equalizer: any[];
-    public request: VLCRequest;
+    public readonly fullscreen: boolean;
+    public readonly stats: { [key: string]: number } | undefined;
+    public readonly audiodelay: number;
+    public readonly apiversion: number;
+    public readonly currentplid: number;
+    public readonly time: number;
+    public readonly volume: number;
+    public readonly length: number;
+    public readonly random: boolean;
+    public readonly audiofilters: AudioFilters;
+    public readonly rate: number;
+    public readonly videoeffects: VideoEffects;
+    public readonly state: VLCPlaylistStatus;
+    public readonly loop: boolean;
+    public readonly version: string;
+    public readonly position: number;
+    public readonly information: Information | undefined;
+    public readonly repeat: boolean;
+    public readonly subtitledelay: number;
+    public readonly equalizer: VLCEqualizer[];
 
+    /**
+     * @constructor
+     * @param {VLCRequest} vlcRequest
+     */
     constructor(vlcRequest: VLCRequest) {
         const parsed = JSON.parse(vlcRequest.data.toString());
 
@@ -46,7 +53,6 @@ export class VLCStatus {
         this.repeat = parsed.repeat;
         this.subtitledelay = parsed.subtitledelay;
         this.equalizer = parsed.equalizer;
-        this.request = vlcRequest;
     }
 }
 
@@ -58,7 +64,12 @@ export enum VLCPlaylistStatus {
 }
 
 export interface AudioFilters {
-    filter_0: string;
+    filter_0: string | undefined;
+    filter_1: string | undefined;
+    filter_2: string | undefined;
+    filter_3: string | undefined;
+    filter_4: string | undefined;
+
 }
 
 export interface Information {
@@ -93,4 +104,8 @@ export interface VideoEffects {
     contrast: number;
     brightness: number;
     gamma: number;
+}
+
+export interface VLCEqualizer {
+    preamp: number;
 }

@@ -2,22 +2,22 @@
  * @module Client
  * @author dylhack
  */
-import { Details, VLCCommand } from "./Requester";
+import { VLCCommand, VLCCredentials } from "./Requester";
 import { VLCStatus } from "./structures/VLCStatus";
 import { VLCPlaylist } from "./structures/VLCPlaylist";
 /**
  * @class VLCClient
- * @description Promise-oriented VLC Client.
+ * @description Promise-oriented VLC HTTP endpoint Client.
  */
 export declare class VLCClient {
     private readonly details;
     /**
      * @constructor
-     * @param details
+     * @param {VLCCredentials} details
      */
-    constructor(details: Details);
+    constructor(details: VLCCredentials);
     /**
-     * @returns Promise<VLCStatus>
+     * @returns {Promise<VLCStatus>}
      */
     getStatus(): Promise<VLCStatus>;
     /**
@@ -25,72 +25,76 @@ export declare class VLCClient {
      */
     getPlaylist(): Promise<VLCPlaylist>;
     /**
+     * @description Add song based on MRL (media resource locator)
+     * @link https://wiki.videolan.org/Media_resource_locator/
      * @param {String} mrl media resource locator
      * @param {Boolean|undefined} play Play the added media
      * @returns {Promise<VLCStatus>}
-     * @desc Add song based on MRL (media resource locator) https://wiki.videolan.org/Media_resource_locator/
      */
     add(mrl: string, play?: boolean | undefined): Promise<VLCStatus>;
     /**
-     * @desc Clear playlist
+     * @description Clear playlist
      * @returns {Promise<VLCStatus>}
      */
     empty(): Promise<VLCStatus>;
     /**
-     * @desc Toggle fullscreen (pretty useless)
+     * @description Toggle fullscreen (pretty useless)
      * @returns {Promise<VLCStatus>}
      */
     fullscreen(isFullscreen: boolean): Promise<VLCStatus>;
     /**
-     * @desc Loop playlist
+     * @description Loop playlist
      * @returns {Promise<VLCStatus>}
      */
     loop(isLoop: boolean): Promise<VLCStatus>;
     /**
-     * @desc Play next song
+     * @description Play next song
      * @returns {Promise<VLCStatus>}
      */
     next(): Promise<VLCStatus>;
     /**
+     * @description Pause current song
      * @returns {Promise<VLCStatus>}
-     * @desc Pause current song.
-     * If used again it will resume the current song
      */
     pause(isPaused: true): Promise<VLCStatus>;
     /**
+     * @description Play song based on ID If no ID is provided it'll play current song (restart / unpause)
      * @param {String} id
      * @returns {Promise<VLCStatus>}
-     * @desc Play song based on ID
-     * If no ID is provided it'll play current song (restart / unpause)
      */
     play(id: string): Promise<VLCStatus>;
     /**
-     * @desc Play previous song
+     * @description Play previous song
      * @returns {Promise<VLCStatus>}
      */
     previous(): Promise<VLCStatus>;
     /**
-     * @desc Remove song based on ID. If an ID isn't provided it'll remove current song
+     * @description Remove song based on ID. If an ID isn't provided it'll remove current song
      * @param {String} id
      * @returns {Promise<VLCStatus>}
      */
     remove(id: string): Promise<VLCStatus>;
     /**
-     * @desc Repeat the current song
+     * @description Repeat the current song
      * @returns {Promise<VLCStatus>}
      */
     repeat(isRepeat: boolean): Promise<VLCStatus>;
     /**
-     * @desc Shuffle playlist
+     * @description Randomize the playlist
      * @returns {Promise<VLCStatus>}
      */
     random(isRandom: boolean): Promise<VLCStatus>;
     /**
-     * @desc Set volume
+     * @description Set volume
      * @param {Number|String} value
      * @returns {Promise<VLCStatus>}
      */
     volume(value: number | string): Promise<VLCStatus>;
+    /**
+     * @description Execute a VLC HTTP endpoint command
+     * @param {VLCCommand} vlcCommand
+     * @param {String[] | undefined} query
+     */
     command(vlcCommand: VLCCommand, query?: string[] | undefined): Promise<VLCStatus>;
 }
 //# sourceMappingURL=Client.d.ts.map

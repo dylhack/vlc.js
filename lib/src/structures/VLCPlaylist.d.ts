@@ -1,4 +1,7 @@
 import { VLCRequest } from "./VLCRequest";
+/**
+ * @class VLCPlaylist
+ */
 export declare class VLCPlaylist {
     ro: string;
     type: string;
@@ -6,6 +9,10 @@ export declare class VLCPlaylist {
     id: string;
     children: VLCPlaylistChild[];
     request: VLCRequest;
+    /**
+     * @constructor
+     * @param {VLCRequest} request
+     */
     constructor(request: VLCRequest);
 }
 export interface VLCPlaylistChild {
