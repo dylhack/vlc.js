@@ -5,72 +5,106 @@
 import * as http from 'http';
 import {IncomingMessage} from 'http';
 import {Buffer} from 'buffer';
-import {Details, VLCPlaylist, VLCStatus} from "./index";
+import {VLCStatus} from "./structures/VLCStatus";
+import {VLCRequest} from "./structures/VLCRequest";
+import {VLCError} from "./structures/VLCError";
+import {VLCPlaylist} from "./structures/VLCPlaylist";
 
-export const _defaultDetails: Details = {
-    address: '127.0.0.1',
-    password: '',
-    port: '8080'
-};
+export interface Details {
+    address: string,
+    password: string,
+    port: number | string
+}
 
-/**
- * @function fetch
- * @param {Details} details
- * @param {String} file
- * @returns {Promise<VLCStatus | VLCPlaylist>}
- * @description This function is responsible for requesting data structures that VLC provides on their HTTP endpoint.
- * These two data structures are the "status.json" and "playlist.json". For further details see the provided link
- * https://wiki.videolan.org/VLC_HTTP_requests
- */
-export function fetch(details = _defaultDetails, file: string): Promise<any> {
-    const address = `http://${details.address}:${details.port}/requests/${file}`;
-    return _request(address, details)
+export const enum VLCCommand {
+    in_play = 'in_play',
+    addsubtitle = 'addsubtitle',
+    in_enqueue = 'in_enqueue',
+    pl_play = 'pl_play',
+    pl_pause = 'pl_pause',
+    pl_forcepause = 'pl_forcepause',
+    pl_forceresume = 'pl_forceresume',
+    pl_stop = 'pl_stop',
+    pl_next = 'pl_next',
+    pl_previous = 'pl_previous',
+    pl_delete = 'pl_delete',
+    pl_empty = 'pl_empty',
+    pl_sort = 'pl_sort',
+    pl_random = 'pl_random',
+    pl_loop = 'pl_loop',
+    pl_repeat = 'pl_repeat',
+    pl_sd_add = 'pl_sd_add',
+    pl_sd_remove = 'pl_sd_remove',
+    fullscreen = 'fullscreen',
+    snapshot = 'snapshot',
+    volume = 'volume',
+    seek = 'seek',
+    key = 'key',
+    audiodelay = 'audiodelay',
+    rate = 'rate',
+    subdelay = 'subdelay',
+    aspectratio = 'aspectratio',
+    preamp = 'preamp',
+    equalizer = 'equalizer',
+    enableeq = 'enableeq',
+    setpreset = 'setpreset',
+    title = 'title',
+    chapter = 'chapter',
+    audio_track = 'audio_track',
+    video_track = 'video_track',
+    subtitle_track = 'subtitle_track'
 }
 
 /**
- * @function command
  * @param details
- * @param command
+ * @param vlcCommand
  * @param query
- * @description This function is responsible for delivering query parameters (aka "commands") to VLC's http endpoint.
- * For further details see the provided link https://wiki.videolan.org/VLC_HTTP_requests
+ * @returns {Promise<VLCStatus>}
  */
-export function command(details = _defaultDetails, command: string, query: string | undefined = undefined): Promise<VLCStatus> {
-    const address = `http://${details.address}:${details.port}/requests/status.json?command=${command}&${query}`;
-    return _request(address, details);
+export async function command(details: Details, vlcCommand: VLCCommand, query: string[] | undefined = undefined): Promise<VLCStatus> {
+    let address = new URL(`http://${details.address}:${details.port}/requests/status.json?command=${vlcCommand}`);
+    if (query) query.forEach((queue: string) => {
+        if (queue.includes('=')) {
+            const key = queue.split('=')[0];
+            const value = queue.split('=')[1];
+            address.searchParams.append(key, value)
+        } else address.searchParams.append(queue, '')
+    });
+    const vlcRequest = await _request(address, details);
+    if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
+        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
+    else return new VLCStatus(vlcRequest);
 }
 
-/**
- * @function _request
- * @param address
- * @param details
- * @returns {Promise<any>}
- * @private
- * @description This method handles all the http requests with VLC.
- */
-export function _request(address: string, details: Details): Promise<any> {
+export async function getStatus(details: Details): Promise<VLCStatus> {
+    let address = new URL(`http://${details.address}:${details.port}/requests/status.json`);
+    const vlcRequest = await _request(address, details);
+    return new VLCStatus(vlcRequest)
+}
+
+export async function getPlaylist(details: Details): Promise<VLCPlaylist> {
+    let address = new URL(`http://${details.address}:${details.port}/requests/playlist.json`);
+    const vlcRequest = await _request(address, details);
+    return new VLCPlaylist(vlcRequest)
+}
+
+export function _request(address: URL, details: Details): Promise<VLCRequest> {
     return new Promise((resolve, reject) => {
+        let data = '';
         const basicAuth = Buffer.from(`:${details.password}`)
             .toString('base64');
-        let str = '';
-        const req = http.get(address, {
+        const req = http.get(address.toString(), {
             headers: {
                 'Authorization': `Basic ${basicAuth}`
             }
-        }, (res: IncomingMessage) => {
-            res.on('error', reject);
-            res.on('data', (data) => {
-                str += data;
-            });
+        });
+        req.on('response', (res: IncomingMessage) => {
+            req.on('error', reject);
+            res.on('data', (chunk: Buffer) => data += chunk);
             res.on('end', () => {
-                try {
-                    const data = JSON.parse(str);
-                    resolve(data);
-                } catch (e) {
-                    reject(e);
-                }
+                const vlcRequest = new VLCRequest(req, res, Buffer.from(data));
+                resolve(vlcRequest);
             });
         });
-        req.on('error', reject);
-    });
+    })
 }

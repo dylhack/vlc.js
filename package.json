@@ -2,8 +2,8 @@
   "name": "vlc.js",
   "version": "2.0.0",
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "lib/index",
+  "types": "lib/index",
   "directories": {
     "test": "test"
   },
@@ -25,7 +25,8 @@
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "ts-jest": "^24.0.2"
   },
   "dependencies": {
     "@types/node": "^12.7.2",

@@ -1,43 +1,71 @@
-const {VLCClient} = require('../src/index.js');
+import {VLCClient} from "../src";
+import {VLCStatus} from "../src/structures/VLCStatus";
+import {VLCPlaylist} from "../src/structures/VLCPlaylist";
 
-const client = new VLCClient({
+const client: VLCClient = new VLCClient({
     address: '127.0.0.1',
     password: 'rosebud',
     port: '8080'
 });
 
 describe('Client', function () {
-    it('Client.getStatus', async function () {
+
+    it('getStatus', async function () {
         const status = await client.getStatus();
-        expect(Object.keys(status)).toEqual([
-            "fullscreen",
-            "audiodelay",
-            "apiversion",
-            "currentplid",
-            "time",
-            "volume",
-            "length",
-            "random",
-            "audiofilters",
-            "rate",
-            "videoeffects",
-            "state",
-            "loop",
-            "version",
-            "position",
-            "repeat",
-            "subtitledelay",
-            "equalizer"
-        ]);
+        expect(status).toBeInstanceOf(VLCStatus);
     });
-    it('Client.getPlaylist', async () => {
+
+    it('getPlaylist', async () => {
         const playlist = await client.getPlaylist();
-        expect(Object.keys(playlist)).toEqual([
-            'ro',
-            'type',
-            'name',
-            'id',
-            'children'
-        ])
+        expect(playlist).toBeInstanceOf(VLCPlaylist)
+    });
+
+    it('add', async () => {
+        // http://ytcracker.com/music/categoryFive - kilobyte.mp3
+        // http://ytcracker.com/music/categoryFive%20-%20kilobyte.mp3
+        await client.add(encodeURI('http://ytcracker.com/music/categoryFive - kilobyte.mp3'), true);
+        const status = await client.getStatus();
+        if (status.information != undefined) {
+            expect(status.information.category.meta.filename).toBe('categoryFive%20-%20kilobyte.mp3');
+        }
+    });
+
+    it('empty', async () => {
+        await client.empty();
+        const status = await client.getStatus();
+        expect(status.information).toBe(undefined)
+    });
+
+    it('fullscreen', async () => {
+        await client.add('mrl', true);
+        setTimeout(async () => {
+            await client.fullscreen(true);
+            const status = await client.getStatus();
+            expect(status.fullscreen).toBe(true)
+        }, 5000);
+    });
+
+    it('loop', async () => {
+        await client.loop(true);
+        const status = await client.getStatus();
+        expect(status.loop).toBe(true)
+    });
+
+    it('repeat', async () => {
+        await client.repeat(true);
+        const status = await client.getStatus();
+        expect(status.repeat).toBe(true)
+    });
+
+    it('random', async () => {
+        await client.random(true);
+        const status = await client.getStatus();
+        expect(status.random).toBe(true);
+    });
+
+    it('volume', async () => {
+        await client.volume(90);
+        const status = await client.getStatus();
+        expect(status.volume).toBe(90)
     })
 });
