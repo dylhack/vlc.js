@@ -2,12 +2,15 @@
   "name": "vlc.js",
   "version": "2.0.0",
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
-  "main": "index.js",
+  "main": "lib/index",
+  "types": "lib/index",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "jest ./test/"
+    "test": "tsc && jest ./test/",
+    "prepublish": "tsc",
+    "docs": "npx typedoc --out .\\docs .\\src"
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,13 @@
   },
   "homepage": "https://github.com/dylhack/vlc.js#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.3",
-    "jest": "^24.8.0"
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "typedoc": "^0.15.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "typescript": "^3.6.2"
+  }
 }

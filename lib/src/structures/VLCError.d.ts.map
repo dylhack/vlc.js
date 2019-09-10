@@ -1,0 +1,1 @@
+{"version":3,"file":"VLCError.d.ts","sourceRoot":"","sources":["../../../src/structures/VLCError.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAC,MAAM,cAAc,CAAA;AAGvC;;;;GAIG;AACH,qBAAa,QAAS,SAAQ,KAAK;IACxB,UAAU,EAAE,UAAU,CAAC;IACvB,OAAO,EAAE,MAAM,GAAG,MAAM,EAAE,CAAC;IAElC;;;OAGG;gBACS,UAAU,EAAE,UAAU;CAOrC"}

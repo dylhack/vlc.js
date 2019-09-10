@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Requester.test.d.ts",
+  "sourceRoot": "",
+  "sources": [
+    "../../test/Requester.test.ts"
+  ],
+  "names": [],
+  "mappings": ""
+}
