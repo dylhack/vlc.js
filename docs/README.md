@@ -1,3 +1,9 @@
+**[vlc.js](README.md)**
+
+[Globals](globals.md)
+
+# vlc.js
+
 ![Banner](./GitHub%20Banner2.png)
 
 ---
