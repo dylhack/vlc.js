@@ -1,4 +1,4 @@
-![Banner](./GitHub%20Banner2.png)
+![Banner](GitHub%20Banner2.png)
 [![Travis](https://travis-ci.com/dylhack/vlc.js.svg?branch=master)](https://travis-ci.com/dylhack/vlc.js)
 [![npm version](https://badge.fury.io/js/vlc.js.svg)](https://badge.fury.io/js/vlc.js)
 ---
