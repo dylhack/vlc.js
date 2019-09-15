@@ -16,7 +16,6 @@ export declare class VLCPlaylist {
      */
     constructor(request: VLCRequest);
 }
-
 export declare type VLCPlaylistChild = {
     ro: string;
     type: string;
