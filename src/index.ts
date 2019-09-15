@@ -1,2 +1,2 @@
-export {VLCClient} from './Client'
-export {getPlaylist, getStatus, VLCCommand, VLCCredentials, command, _request} from './Requester'
+export {VLCClient} from './http/Client'
+export {getPlaylist, getStatus, command, _request} from './http/Requester'
