@@ -1,9 +1,9 @@
 {
   "version": 3,
-  "file": "Client.test.d.ts",
+  "file": "vlcrc.test.d.ts",
   "sourceRoot": "",
   "sources": [
-    "../../src/test/Client.test.ts"
+    "../../src/test/vlcrc.test.ts"
   ],
   "names": [],
   "mappings": ""

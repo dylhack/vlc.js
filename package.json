@@ -8,8 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tsc && jest ./test/",
+    "test": "tsc && jest",
     "prepublish": "tsc",
+    "compile": "tsc",
     "docs": "npx typedoc --out .\\docs .\\src"
   },
   "repository": {

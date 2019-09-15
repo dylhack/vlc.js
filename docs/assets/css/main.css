@@ -2018,7 +2018,6 @@ pre code {
         background-color: #fff;
         transform: translate(100%, 0);
     }
-
     html.default .col-menu > *:last-child {
         padding-bottom: 20px;
     }
@@ -2292,7 +2291,6 @@ dl.tsd-comment-tags p {
     .from-has-options #tsd-filter .tsd-filter-group {
         animation: fade-out 0.2s;
     }
-
     #tsd-filter label,
     #tsd-filter .tsd-select {
         display: block;
@@ -2597,11 +2595,9 @@ footer .tsd-legend {
     .menu-sticky-wrap {
         position: static;
     }
-
     .no-csspositionsticky .menu-sticky-wrap.sticky {
         position: fixed;
     }
-
     .no-csspositionsticky .menu-sticky-wrap.sticky-current {
         position: fixed;
     }
@@ -2610,7 +2606,6 @@ footer .tsd-legend {
     .no-csspositionsticky .menu-sticky-wrap.sticky-current ul.after-current {
         opacity: 0;
     }
-
     .no-csspositionsticky .menu-sticky-wrap.sticky-bottom {
         position: absolute;
         top: auto !important;
@@ -2618,12 +2613,10 @@ footer .tsd-legend {
         bottom: 0;
         right: 0;
     }
-
     .csspositionsticky .menu-sticky-wrap.sticky {
         position: -webkit-sticky;
         position: sticky;
     }
-
     .csspositionsticky .menu-sticky-wrap.sticky-current {
         position: -webkit-sticky;
         position: sticky;
@@ -3149,7 +3142,6 @@ input[type=checkbox]:checked + .tsd-widget:before {
         right: 100%;
         margin-right: -5px;
     }
-
     .tsd-select .tsd-select-label:before {
         background-position: -280px 0;
     }
