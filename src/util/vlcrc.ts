@@ -26,7 +26,7 @@ export type ConfigLine = {
 
 export function _readLine(line: string): ConfigLine {
     let key = line.substr(line.startsWith('#') ? 1 : 0, line.indexOf('='));
-    let value = line.substr(line.indexOf('='));
+    let value = line.substr(line.indexOf('=') + 1);
     let output: [string, any] = [key, value];
 
     switch (value.toLowerCase()) {
@@ -40,7 +40,7 @@ export function _readLine(line: string): ConfigLine {
     return {
         key: output[0],
         value: output[1],
-        enabled: line.startsWith('#')
+        enabled: !line.startsWith('#')
     }
 }
 
