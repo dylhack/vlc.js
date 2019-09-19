@@ -1,6 +1,4 @@
-**[vlc.js](README.md)**
-
-[Globals](globals.md)
+[vlc.js](README.md) › [Globals](globals.md)
 
 # vlc.js
 

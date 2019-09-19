@@ -17,6 +17,32 @@ export const locations = {
     win32: `${process.env.home}\\Application Data\\vlc\\vlcrc`,
 };
 
+export type ConfigLine = {
+    key: string;
+    value: string | number | boolean;
+    enabled: boolean;
+}
+
+export function _readLine(line: string): ConfigLine {
+    let key = line.substr(line.startsWith('#') ? 1 : 0, line.indexOf('='));
+    let value = line.substr(line.indexOf('='));
+    let output: [string, any] = [key, value];
+
+    switch (value.toLowerCase()) {
+        case 'true':
+        case 'false':
+            output[1] = (value.toLowerCase() === 'true');
+            break;
+    }
+    if (!isNaN(Number(value))) output[1] = Number(value);
+
+    return {
+        key: output[0],
+        value: output[1],
+        enabled: line.startsWith('#')
+    }
+}
+
 export function _getPath(): string | undefined {
     switch (process.platform) {
         case "darwin":
@@ -49,66 +75,65 @@ export function editVLCRC(location?: string): VLCRC {
 }
 
 export class VLCRC {
-    private _vlcrc: Buffer;
+    private _map: Map<string, ConfigLine>;
+    private readonly _original: Buffer;
 
     constructor(data: Buffer) {
-        this._vlcrc = data;
-    }
-
-    _update(data: Buffer): void {
-        this._vlcrc = data;
-    }
-
-    _locate(key: string): [string, string] | undefined {
-        let split: [string, string][] = [];
-        this._vlcrc.toString()
+        this._original = data;
+        this._map = new Map();
+        data.toString()
             .split('\n')
-            .forEach(x => {
-                let keyValue = x.split('=');
-                if (keyValue[0] && keyValue[1]) split.push([keyValue[0], keyValue[1]])
+            .forEach((line: string) => {
+                const configLine = _readLine(line);
+                if (configLine) this._map.set(configLine.key, configLine);
+            })
+    }
+
+    get(key: string): ConfigLine | undefined {
+        return this._map.get(key);
+    }
+
+    set(key: string, value: boolean | number | string): ConfigLine | undefined {
+        let got = this._map.get(key);
+        if (got) {
+            got.value = value;
+            this._map.set(key, got);
+            return got;
+        } else throw new Error(`Could not find ${key} in configuration map.`);
+    }
+
+    disable(key: string): ConfigLine | undefined {
+        let configLine = this._map.get(key);
+        if (configLine) {
+            configLine.enabled = false;
+            this._map.set(key, configLine);
+            return configLine;
+        } else throw new Error(`Could not find ${key} in configuration map.`)
+    }
+
+    enable(key: string): ConfigLine | undefined {
+        let configLine = this._map.get(key);
+        if (configLine) {
+            configLine.enabled = true;
+            this._map.set(key, configLine);
+            return configLine;
+        } else throw new Error(`Could not find ${key} in configuration map.`)
+    }
+
+    export(): Buffer {
+        let str = '';
+        this._original
+            .toString()
+            .split('\n')
+            .forEach((line: string) => {
+                const configLine = _readLine(line);
+                if (this._map.has(configLine.key)) {
+                    str += `${configLine.enabled ? '' : '#'}${configLine.key}=${configLine.value}`;
+                } else {
+                    str += `${line}\n`;
+                }
             });
-        return split.find(x => x[0].includes(key));
+        return Buffer.from(str);
     }
 
-    disable(key: string): Buffer | void {
-        let str = this._vlcrc.toString();
-        const keyValue = this._locate(key);
-        if (keyValue) {
-            if (!keyValue[0].startsWith('#')) str.replace(`${keyValue[0]}=${keyValue[1]}`, `#${keyValue[0]}=${keyValue[1]}`);
-            this._update(Buffer.from(str));
-            return Buffer.from(str);
-        } else throw new Error(`Could not locate ${key} in the vlcrc buffer.`);
-    }
-
-    enable(key: string): Buffer | void {
-        let str = this._vlcrc.toString();
-        const keyValue = this._locate(key);
-        if (keyValue) {
-            if (keyValue[0].startsWith('#')) str.replace(`#${keyValue[0]}=${keyValue[1]}`, `${keyValue[0]}=${keyValue[1]}`);
-            this._update(Buffer.from(str));
-            return Buffer.from(str);
-        }
-    }
-
-    get(key: string): [string, string] | undefined {
-        return this._locate(key);
-    }
-
-    set(key: string, value: string): Buffer {
-        let str = this._vlcrc.toString();
-        const keyValue = this._locate(key);
-        if (keyValue) {
-            str.replace(`${keyValue[0]}=${keyValue[1]}`, `${key}=${value}`);
-            this._update(Buffer.from(str));
-            return Buffer.from(str);
-        } else {
-            str += `${key}=${value}`;
-            this._update(Buffer.from(str));
-            return Buffer.from(str);
-        }
-    }
-
-    getConfig(): Buffer {
-        return this._vlcrc;
-    }
 }

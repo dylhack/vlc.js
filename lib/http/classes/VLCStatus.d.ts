@@ -46,7 +46,6 @@ export interface AudioFilters {
     filter_3: string | undefined;
     filter_4: string | undefined;
 }
-
 export interface Equalizer {
     presets: Presets;
     bands: {
@@ -54,7 +53,6 @@ export interface Equalizer {
     };
     preamp: number;
 }
-
 export interface Presets {
     "preset id=\"8\"": string | undefined;
     "preset id=\"4\"": string | undefined;

@@ -14,17 +14,28 @@ export declare const locations: {
     };
     win32: string;
 };
+export declare type ConfigLine = {
+    key: string;
+    value: string | number | boolean;
+    enabled: boolean;
+};
+
+export declare function _readLine(line: string): ConfigLine;
 export declare function _getPath(): string | undefined;
 export declare function editVLCRC(location?: string): VLCRC;
 export declare class VLCRC {
-    private _vlcrc;
+    private _map;
+    private readonly _original;
     constructor(data: Buffer);
-    _update(data: Buffer): void;
-    _locate(key: string): [string, string] | undefined;
-    disable(key: string): Buffer | void;
-    enable(key: string): Buffer | void;
-    get(key: string): [string, string] | undefined;
-    set(key: string, value: string): Buffer;
-    getConfig(): Buffer;
+
+    get(key: string): ConfigLine | undefined;
+
+    set(key: string, value: boolean | number | string): ConfigLine | undefined;
+
+    disable(key: string): ConfigLine | undefined;
+
+    enable(key: string): ConfigLine | undefined;
+
+    export(): Buffer;
 }
 //# sourceMappingURL=vlcrc.d.ts.map
