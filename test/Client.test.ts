@@ -1,6 +1,6 @@
-import {VLCClient} from "..";
-import {VLCStatus} from "../http/classes/VLCStatus";
-import {VLCPlaylist} from "../http/classes/VLCPlaylist";
+import {VLCClient} from "../src";
+import {VLCStatus} from "../src/http/classes/VLCStatus";
+import {VLCPlaylist} from "../src/http/classes/VLCPlaylist";
 
 const client: VLCClient = new VLCClient({
     address: '127.0.0.1',

@@ -2,14 +2,14 @@
   "name": "vlc.js",
   "version": "2.0.0",
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
-  "main": "lib/index",
-  "types": "lib/index",
+  "main": "lib/src/index",
+  "types": "lib/src/index",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "tsc && jest",
-    "prepublish": "tsc",
+    "prepublish": "tsc && npm run docs",
     "compile": "tsc",
     "docs": "typedoc --out docs ./src --plugin typedoc-plugin-markdown"
   },

@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
+import * as os from "os";
 
 /**
  * @link https://www.videolan.org/support/faq.html#Config
@@ -7,14 +8,14 @@ import * as fs from "fs";
  */
 export const locations = {
     unix: {
-        v8: `${process.env.home}/.vlc/vlcrc`,
-        v9: `${process.env.home}/.config/vlc/vlcrc`
+        v8: `${os.homedir()}/.vlc/vlcrc`,
+        v9: `${os.homedir()}/.config/vlc/vlcrc`
     },
     macos: {
-        v8: `${process.env.home}/Library/Preferences/org.videolan.vlc`,
-        v9: `${process.env.home}/Library/Preferences/VLC`
+        v8: `${os.homedir()}/Library/Preferences/org.videolan.vlc`,
+        v9: `${os.homedir()}/Library/Preferences/VLC`
     },
-    win32: `${process.env.home}\\Application Data\\vlc\\vlcrc`,
+    win32: `${os.homedir()}\\AppData\\Roaming\\vlc\\vlcrc`,
 };
 
 export type ConfigLine = {

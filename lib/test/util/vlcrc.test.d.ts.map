@@ -3,7 +3,7 @@
   "file": "vlcrc.test.d.ts",
   "sourceRoot": "",
   "sources": [
-    "../../src/test/vlcrc.test.ts"
+    "../../../test/util/vlcrc.test.ts"
   ],
   "names": [],
   "mappings": ""

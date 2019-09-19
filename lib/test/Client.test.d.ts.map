@@ -3,7 +3,7 @@
   "file": "Client.test.d.ts",
   "sourceRoot": "",
   "sources": [
-    "../../src/test/Client.test.ts"
+    "../../test/Client.test.ts"
   ],
   "names": [],
   "mappings": ""

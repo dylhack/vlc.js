@@ -31,7 +31,7 @@
 
 \+ **new VLCRC**(`data`: Buffer): *[VLCRC](_util_vlcrc_.vlcrc.md)*
 
-Defined in util/vlcrc.ts:79
+Defined in util/vlcrc.ts:80
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **_map**: *Map‹string, [ConfigLine](../modules/_util_vlcrc_.md#configline)›*
 
-Defined in util/vlcrc.ts:78
+Defined in util/vlcrc.ts:79
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **_original**: *Buffer*
 
-Defined in util/vlcrc.ts:79
+Defined in util/vlcrc.ts:80
 
 ## Methods
 
@@ -63,7 +63,7 @@ Defined in util/vlcrc.ts:79
 
 ▸ **disable**(`key`: string): *[ConfigLine](../modules/_util_vlcrc_.md#configline) | undefined*
 
-Defined in util/vlcrc.ts:105
+Defined in util/vlcrc.ts:106
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ ___
 
 ▸ **enable**(`key`: string): *[ConfigLine](../modules/_util_vlcrc_.md#configline) | undefined*
 
-Defined in util/vlcrc.ts:114
+Defined in util/vlcrc.ts:115
 
 **Parameters:**
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **export**(): *Buffer*
 
-Defined in util/vlcrc.ts:123
+Defined in util/vlcrc.ts:124
 
 **Returns:** *Buffer*
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **get**(`key`: string): *[ConfigLine](../modules/_util_vlcrc_.md#configline) | undefined*
 
-Defined in util/vlcrc.ts:92
+Defined in util/vlcrc.ts:93
 
 **Parameters:**
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **set**(`key`: string, `value`: boolean | number | string): *[ConfigLine](../modules/_util_vlcrc_.md#configline) | undefined*
 
-Defined in util/vlcrc.ts:96
+Defined in util/vlcrc.ts:97
 
 **Parameters:**
 

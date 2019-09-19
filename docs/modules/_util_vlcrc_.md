@@ -28,7 +28,7 @@
 
 Ƭ **ConfigLine**: *object*
 
-Defined in util/vlcrc.ts:20
+Defined in util/vlcrc.ts:21
 
 #### Type declaration:
 
@@ -44,7 +44,7 @@ Defined in util/vlcrc.ts:20
 
 ▸ **_getPath**(): *string | undefined*
 
-Defined in util/vlcrc.ts:46
+Defined in util/vlcrc.ts:47
 
 **Returns:** *string | undefined*
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **_readLine**(`line`: string): *[ConfigLine](_util_vlcrc_.md#configline)*
 
-Defined in util/vlcrc.ts:26
+Defined in util/vlcrc.ts:27
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **editVLCRC**(`location?`: undefined | string): *[VLCRC](../classes/_util_vlcrc_.vlcrc.md)*
 
-Defined in util/vlcrc.ts:67
+Defined in util/vlcrc.ts:68
 
 **Parameters:**
 
@@ -86,29 +86,29 @@ Name | Type |
 
 ### ▪ **locations**: *object*
 
-Defined in util/vlcrc.ts:8
+Defined in util/vlcrc.ts:9
 
 **`link`** https://www.videolan.org/support/faq.html#Config
 Last updated: September 15th, 2019
 
 ###  win32
 
-• **win32**: *string* =  `${process.env.home}\\Application Data\\vlc\\vlcrc`
+• **win32**: *string* =  `${os.homedir()}\\AppData\\Roaming\\vlc\\vlcrc`
 
-Defined in util/vlcrc.ts:17
+Defined in util/vlcrc.ts:18
 
 ▪ **macos**: *object*
 
-Defined in util/vlcrc.ts:13
+Defined in util/vlcrc.ts:14
 
-* **v8**: *string* =  `${process.env.home}/Library/Preferences/org.videolan.vlc`
+* **v8**: *string* =  `${os.homedir()}/Library/Preferences/org.videolan.vlc`
 
-* **v9**: *string* =  `${process.env.home}/Library/Preferences/VLC`
+* **v9**: *string* =  `${os.homedir()}/Library/Preferences/VLC`
 
 ▪ **unix**: *object*
 
-Defined in util/vlcrc.ts:9
+Defined in util/vlcrc.ts:10
 
-* **v8**: *string* =  `${process.env.home}/.vlc/vlcrc`
+* **v8**: *string* =  `${os.homedir()}/.vlc/vlcrc`
 
-* **v9**: *string* =  `${process.env.home}/.config/vlc/vlcrc`
+* **v9**: *string* =  `${os.homedir()}/.config/vlc/vlcrc`
