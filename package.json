@@ -4,12 +4,16 @@
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
   "main": "lib/src/index",
   "types": "lib/src/index",
+  "publishConfig": {
+    "name": "@dylhack/vlc.js",
+    "registry": "https://npm.pkg.github.com/dylhack"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "tsc && jest",
-    "prepublish": "tsc && npm run docs",
+    "prepare": "tsc && npm run docs",
     "compile": "tsc",
     "docs": "typedoc --out docs ./src --plugin typedoc-plugin-markdown"
   },
