@@ -5,7 +5,7 @@ import {VLCPlaylist} from "../../src/http/classes/VLCPlaylist";
 const client: VLCClient = new VLCClient({
     address: '127.0.0.1',
     password: 'rosebud',
-    port: '8080'
+    port: 8080
 });
 
 describe('Client', function () {
