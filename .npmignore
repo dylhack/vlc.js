@@ -1,3 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
 # Logs
 logs
 *.log
@@ -42,7 +44,7 @@ node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
-types/
+typings/
 
 # TypeScript cache
 *.tsbuildinfo
@@ -87,4 +89,3 @@ types/
 # DynamoDB Local files
 .dynamodb/
 
-lib/

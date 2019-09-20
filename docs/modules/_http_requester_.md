@@ -43,7 +43,7 @@ Defined in http/Requester.ts:22
 
 * **password**: *string*
 
-* **port**: *number | string*
+* **port**: *number*
 
 ## Functions
 

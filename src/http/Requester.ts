@@ -22,7 +22,7 @@ import {VLCPlaylist} from "./classes/VLCPlaylist";
 export type VLCCredentials = {
     address: string,
     password: string,
-    port: number | string
+    port: number
 }
 
 /**
