@@ -19,33 +19,22 @@ export declare type ConfigItem = {
     value: string;
     enabled: boolean;
 };
-
 export declare function _readLine(line: string): ConfigItem | undefined;
-
 export declare function _getPath(): string | undefined;
-
 /**
  * If no location is provided it will get the default install location
  * @param location
  * @returns {VLCRCModifier}
  */
 export declare function editVLCRC(location?: string): VLCRCModifier;
-
 export declare class VLCRCModifier {
     private _map;
     private readonly _original;
-
     constructor(data: Buffer);
-
     get(key: string): ConfigItem | undefined;
-
     set(key: string, value: boolean | number | string): ConfigItem | undefined;
-
     disable(key: string): ConfigItem | undefined;
-
     enable(key: string): ConfigItem | undefined;
-
     export(): Buffer;
 }
-
 //# sourceMappingURL=VLCRCModifier.d.ts.map
