@@ -51,7 +51,7 @@ Defined in http/Requester.ts:22
 
 ▸ **_request**(`address`: URL, `details`: [VLCCredentials](_http_requester_.md#vlccredentials)): *Promise‹[VLCRequest](../classes/_http_classes_vlcrequest_.vlcrequest.md)›*
 
-Defined in http/Requester.ts:120
+Defined in http/Requester.ts:124
 
 **Parameters:**
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **getPlaylist**(`details`: [VLCCredentials](_http_requester_.md#vlccredentials)): *Promise‹[VLCPlaylist](../classes/_http_classes_vlcplaylist_.vlcplaylist.md)›*
 
-Defined in http/Requester.ts:108
+Defined in http/Requester.ts:110
 
 **Parameters:**
 

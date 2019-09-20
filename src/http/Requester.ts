@@ -98,6 +98,8 @@ export async function command(details: VLCCredentials, vlcCommand: VLCCommand, q
 export async function getStatus(details: VLCCredentials): Promise<VLCStatus> {
     let address = new URL(`http://${details.address}:${details.port}/requests/status.json`);
     const vlcRequest = await _request(address, details);
+    if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
+        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
     return new VLCStatus(vlcRequest)
 }
 
@@ -108,6 +110,8 @@ export async function getStatus(details: VLCCredentials): Promise<VLCStatus> {
 export async function getPlaylist(details: VLCCredentials): Promise<VLCPlaylist> {
     let address = new URL(`http://${details.address}:${details.port}/requests/playlist.json`);
     const vlcRequest = await _request(address, details);
+    if (vlcRequest.data.includes('<title>Error loading /requests/playlist.json</title>')
+        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
     return new VLCPlaylist(vlcRequest)
 }
 
