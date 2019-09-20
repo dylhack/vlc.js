@@ -13,4 +13,4 @@
 * ["http/classes/VLCRequest"](modules/_http_classes_vlcrequest_.md)
 * ["http/classes/VLCStatus"](modules/_http_classes_vlcstatus_.md)
 * ["index"](modules/_index_.md)
-* ["util/vlcrc"](modules/_util_vlcrc_.md)
+* ["util/VLCRCModifier"](modules/_util_vlcrcmodifier_.md)

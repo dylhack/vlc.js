@@ -1542,7 +1542,7 @@ gradient-type=1
 #lua-config=
 
 # Password (string)
-http-password==Qwerty
+http-password=Qwerty
 
 # Source directory (string)
 #http-src=
@@ -5245,4 +5245,5 @@ extraintf=http:telnet
 
 # Playlist bookmark 10 (string)
 #bookmark10=
+
 

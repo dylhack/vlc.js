@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as os from "os";
 
 /**
- * @link https://www.videolan.org/support/faq.html#Config
+ * @link https://wiki.videolan.org/Preferences/
  * Last updated: September 15th, 2019
  */
 export const locations = {
@@ -18,24 +18,18 @@ export const locations = {
     win32: `${os.homedir()}\\AppData\\Roaming\\vlc\\vlcrc`,
 };
 
-export type ConfigLine = {
+export type ConfigItem = {
     key: string;
-    value: string | number | boolean;
+    value: string;
     enabled: boolean;
 }
 
-export function _readLine(line: string): ConfigLine {
-    let key = line.substr(line.startsWith('#') ? 1 : 0, line.indexOf('='));
+export function _readLine(line: string): ConfigItem | undefined {
+    let commented = line.startsWith('#');
+    let key = line.substr((commented ? 1 : 0), line.indexOf('=') - (commented ? 1 : 0));
     let value = line.substr(line.indexOf('=') + 1);
-    let output: [string, any] = [key, value];
-
-    switch (value.toLowerCase()) {
-        case 'true':
-        case 'false':
-            output[1] = (value.toLowerCase() === 'true');
-            break;
-    }
-    if (!isNaN(Number(value))) output[1] = Number(value);
+    let output: [string, string] = [key, value];
+    if (key.includes(' ') || !line.includes('=')) return undefined;
 
     return {
         key: output[0],
@@ -65,18 +59,23 @@ export function _getPath(): string | undefined {
     }
 }
 
-export function editVLCRC(location?: string): VLCRC {
+/**
+ * If no location is provided it will get the default install location
+ * @param location
+ * @returns {VLCRCModifier}
+ */
+export function editVLCRC(location?: string): VLCRCModifier {
     const resolvable: string | undefined = location ? location : _getPath();
     if (resolvable) {
         const data: Buffer = fs.readFileSync(resolvable);
-        return new VLCRC(data);
+        return new VLCRCModifier(data);
     } else {
         throw new Error('Could not find location of the vlcrc, please provide a resolvable location in the first argument.')
     }
 }
 
-export class VLCRC {
-    private _map: Map<string, ConfigLine>;
+export class VLCRCModifier {
+    private _map: Map<string, ConfigItem>;
     private readonly _original: Buffer;
 
     constructor(data: Buffer) {
@@ -90,20 +89,20 @@ export class VLCRC {
             })
     }
 
-    get(key: string): ConfigLine | undefined {
+    get(key: string): ConfigItem | undefined {
         return this._map.get(key);
     }
 
-    set(key: string, value: boolean | number | string): ConfigLine | undefined {
+    set(key: string, value: boolean | number | string): ConfigItem | undefined {
         let got = this._map.get(key);
         if (got) {
-            got.value = value;
+            got.value = value.toString();
             this._map.set(key, got);
             return got;
         } else throw new Error(`Could not find ${key} in configuration map.`);
     }
 
-    disable(key: string): ConfigLine | undefined {
+    disable(key: string): ConfigItem | undefined {
         let configLine = this._map.get(key);
         if (configLine) {
             configLine.enabled = false;
@@ -112,7 +111,7 @@ export class VLCRC {
         } else throw new Error(`Could not find ${key} in configuration map.`)
     }
 
-    enable(key: string): ConfigLine | undefined {
+    enable(key: string): ConfigItem | undefined {
         let configLine = this._map.get(key);
         if (configLine) {
             configLine.enabled = true;
@@ -128,11 +127,9 @@ export class VLCRC {
             .split('\n')
             .forEach((line: string) => {
                 const configLine = _readLine(line);
-                if (this._map.has(configLine.key)) {
-                    str += `${configLine.enabled ? '' : '#'}${configLine.key}=${configLine.value}`;
-                } else {
-                    str += `${line}\n`;
-                }
+                if (configLine && this._map.has(configLine.key)) {
+                    str += `${configLine.enabled ? '' : '#'}${configLine.key}=${configLine.value}\n`;
+                } else str += `${line}\n`;
             });
         return Buffer.from(str);
     }
