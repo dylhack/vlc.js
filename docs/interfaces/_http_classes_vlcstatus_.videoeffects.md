@@ -22,7 +22,7 @@
 
 • **brightness**: *number*
 
-Defined in http/classes/VLCStatus.ts:152
+Defined in http/classes/VLCStatus.ts:164
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **contrast**: *number*
 
-Defined in http/classes/VLCStatus.ts:151
+Defined in http/classes/VLCStatus.ts:163
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **gamma**: *number*
 
-Defined in http/classes/VLCStatus.ts:153
+Defined in http/classes/VLCStatus.ts:165
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **hue**: *number*
 
-Defined in http/classes/VLCStatus.ts:149
+Defined in http/classes/VLCStatus.ts:161
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **saturation**: *number*
 
-Defined in http/classes/VLCStatus.ts:150
+Defined in http/classes/VLCStatus.ts:162

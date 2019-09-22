@@ -111,7 +111,7 @@ export interface Information {
 export interface Category {
     "Stream 0": Stream0;
     "Stream 1": Stream1;
-    meta: Meta;
+    meta: Meta | any;
 }
 
 export interface Stream0 {
@@ -138,11 +138,23 @@ export interface Stream1 {
 }
 
 export interface Meta {
-    filename: string;
-    title: string;
-    url: string;
-    description: string;
-    artwork_url: string;
+    description?: string;
+    date?: string;
+    genre?: string;
+    track_total?: string;
+    album?: string;
+    track_number?: string;
+    filename?: string;
+    now_playing?: string;
+    publisher?: string;
+    copyright?: string;
+    artist?: string;
+    language?: string;
+    title?: string;
+    url?: string;
+    episodeNumber: number;
+    seasonNumber: number;
+    showName: string;
 }
 
 export interface VideoEffects {

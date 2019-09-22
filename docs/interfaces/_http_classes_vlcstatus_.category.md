@@ -34,6 +34,6 @@ ___
 
 ###  meta
 
-• **meta**: *[Meta](_http_classes_vlcstatus_.meta.md)*
+• **meta**: *[Meta](_http_classes_vlcstatus_.meta.md) | any*
 
 Defined in http/classes/VLCStatus.ts:114
