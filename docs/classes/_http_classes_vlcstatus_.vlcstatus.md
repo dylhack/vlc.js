@@ -1,4 +1,4 @@
-[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)
+[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)
 
 # Class: VLCStatus
 
@@ -22,9 +22,10 @@
 * [audiodelay](_http_classes_vlcstatus_.vlcstatus.md#audiodelay)
 * [audiofilters](_http_classes_vlcstatus_.vlcstatus.md#audiofilters)
 * [currentplid](_http_classes_vlcstatus_.vlcstatus.md#currentplid)
+* [date](_http_classes_vlcstatus_.vlcstatus.md#optional-date)
 * [equalizer](_http_classes_vlcstatus_.vlcstatus.md#equalizer)
 * [fullscreen](_http_classes_vlcstatus_.vlcstatus.md#fullscreen)
-* [information](_http_classes_vlcstatus_.vlcstatus.md#information)
+* [information](_http_classes_vlcstatus_.vlcstatus.md#optional-information)
 * [length](_http_classes_vlcstatus_.vlcstatus.md#length)
 * [loop](_http_classes_vlcstatus_.vlcstatus.md#loop)
 * [position](_http_classes_vlcstatus_.vlcstatus.md#position)
@@ -45,7 +46,7 @@
 
 \+ **new VLCStatus**(`vlcRequest`: [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)): *[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)*
 
-Defined in http/classes/VLCStatus.ts:27
+Defined in http/classes/VLCStatus.ts:28
 
 **`constructor`** 
 
@@ -91,11 +92,19 @@ Defined in http/classes/VLCStatus.ts:12
 
 ___
 
+### `Optional` date
+
+• **date**? : *undefined | number*
+
+Defined in http/classes/VLCStatus.ts:24
+
+___
+
 ###  equalizer
 
 • **equalizer**: *[Equalizer](../modules/_http_classes_vlcstatus_.md#equalizer)[]*
 
-Defined in http/classes/VLCStatus.ts:27
+Defined in http/classes/VLCStatus.ts:28
 
 ___
 
@@ -107,11 +116,11 @@ Defined in http/classes/VLCStatus.ts:8
 
 ___
 
-###  information
+### `Optional` information
 
-• **information**: *[Information](../modules/_http_classes_vlcstatus_.md#information) | undefined*
+• **information**? : *[Information](../modules/_http_classes_vlcstatus_.md#information)*
 
-Defined in http/classes/VLCStatus.ts:24
+Defined in http/classes/VLCStatus.ts:25
 
 ___
 
@@ -159,7 +168,7 @@ ___
 
 • **repeat**: *boolean*
 
-Defined in http/classes/VLCStatus.ts:25
+Defined in http/classes/VLCStatus.ts:26
 
 ___
 
@@ -183,7 +192,7 @@ ___
 
 • **subtitledelay**: *number*
 
-Defined in http/classes/VLCStatus.ts:26
+Defined in http/classes/VLCStatus.ts:27
 
 ___
 

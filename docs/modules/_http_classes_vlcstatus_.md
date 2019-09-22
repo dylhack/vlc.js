@@ -1,4 +1,4 @@
-[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](_http_classes_vlcstatus_.md)
+[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](_http_classes_vlcstatus_.md)
 
 # External module: "http/classes/VLCStatus"
 
@@ -29,7 +29,7 @@
 
 Ƭ **AudioFilters**: *object*
 
-Defined in http/classes/VLCStatus.ts:66
+Defined in http/classes/VLCStatus.ts:68
 
 #### Type declaration:
 
@@ -49,7 +49,7 @@ ___
 
 Ƭ **Category**: *object*
 
-Defined in http/classes/VLCStatus.ts:109
+Defined in http/classes/VLCStatus.ts:111
 
 #### Type declaration:
 
@@ -63,7 +63,7 @@ ___
 
 Ƭ **Equalizer**: *object*
 
-Defined in http/classes/VLCStatus.ts:74
+Defined in http/classes/VLCStatus.ts:76
 
 #### Type declaration:
 
@@ -79,7 +79,7 @@ ___
 
 Ƭ **Information**: *object*
 
-Defined in http/classes/VLCStatus.ts:101
+Defined in http/classes/VLCStatus.ts:103
 
 #### Type declaration:
 
@@ -99,7 +99,7 @@ ___
 
 Ƭ **Meta**: *object*
 
-Defined in http/classes/VLCStatus.ts:123
+Defined in http/classes/VLCStatus.ts:125
 
 #### Type declaration:
 
@@ -113,7 +113,7 @@ Defined in http/classes/VLCStatus.ts:123
 
 * **description**? : *undefined | string*
 
-* **episodeNumber**: *number*
+* **episodeNumber**? : *undefined | string*
 
 * **filename**? : *undefined | string*
 
@@ -125,7 +125,9 @@ Defined in http/classes/VLCStatus.ts:123
 
 * **publisher**? : *undefined | string*
 
-* **seasonNumber**: *number*
+* **seasonNumber**? : *undefined | string*
+
+* **showName**? : *undefined | string*
 
 * **title**? : *undefined | string*
 
@@ -141,7 +143,7 @@ ___
 
 Ƭ **Presets**: *object*
 
-Defined in http/classes/VLCStatus.ts:80
+Defined in http/classes/VLCStatus.ts:82
 
 #### Type declaration:
 
@@ -187,7 +189,7 @@ ___
 
 Ƭ **Stream0**: *object*
 
-Defined in http/classes/VLCStatus.ts:114
+Defined in http/classes/VLCStatus.ts:116
 
 #### Type declaration:
 
@@ -209,7 +211,7 @@ ___
 
 Ƭ **VideoEffects**: *object*
 
-Defined in http/classes/VLCStatus.ts:142
+Defined in http/classes/VLCStatus.ts:145
 
 #### Type declaration:
 

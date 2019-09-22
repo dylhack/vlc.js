@@ -21,7 +21,8 @@ export class VLCStatus {
     public readonly loop: boolean;
     public readonly version: string;
     public readonly position: number;
-    public readonly information: Information | undefined;
+    public readonly date?: number;
+    public readonly information?: Information;
     public readonly repeat: boolean;
     public readonly subtitledelay: number;
     public readonly equalizer: Equalizer[];
@@ -53,6 +54,7 @@ export class VLCStatus {
         this.repeat = parsed.repeat;
         this.subtitledelay = parsed.subtitledelay;
         this.equalizer = parsed.equalizer;
+        this.date = parsed.date
     }
 }
 
@@ -135,8 +137,9 @@ export type Meta = {
     language?: string;
     title?: string;
     url?: string;
-    episodeNumber: number;
-    seasonNumber: number;
+    episodeNumber?: string;
+    seasonNumber?: string;
+    showName?: string;
 }
 
 export type VideoEffects = {

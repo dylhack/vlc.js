@@ -1,6 +1,6 @@
 {
-  "name": "@dylhack/vlc.js",
-  "version": "3.2.0",
+  "name": "vlc.js",
+  "version": "3.2.1",
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
   "main": "lib/src/index",
   "types": "lib/src/index",

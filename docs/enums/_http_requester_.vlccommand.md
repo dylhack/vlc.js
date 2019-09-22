@@ -1,4 +1,4 @@
-[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/Requester"](../modules/_http_requester_.md) › [VLCCommand](_http_requester_.vlccommand.md)
+[vlc.js](../README.md) › [Globals](../globals.md) › ["http/Requester"](../modules/_http_requester_.md) › [VLCCommand](_http_requester_.vlccommand.md)
 
 # Enumeration: VLCCommand
 

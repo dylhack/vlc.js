@@ -1,4 +1,4 @@
-[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCError"](../modules/_http_classes_vlcerror_.md) › [VLCError](_http_classes_vlcerror_.vlcerror.md)
+[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCError"](../modules/_http_classes_vlcerror_.md) › [VLCError](_http_classes_vlcerror_.vlcerror.md)
 
 # Class: VLCError
 

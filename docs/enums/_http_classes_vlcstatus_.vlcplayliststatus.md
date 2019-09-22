@@ -1,4 +1,4 @@
-[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCPlaylistStatus](_http_classes_vlcstatus_.vlcplayliststatus.md)
+[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCPlaylistStatus](_http_classes_vlcstatus_.vlcplayliststatus.md)
 
 # Enumeration: VLCPlaylistStatus
 
@@ -17,7 +17,7 @@
 
 • **paused**: = "paused"
 
-Defined in http/classes/VLCStatus.ts:62
+Defined in http/classes/VLCStatus.ts:64
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **playing**: = "playing"
 
-Defined in http/classes/VLCStatus.ts:61
+Defined in http/classes/VLCStatus.ts:63
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **stopped**: = "stopped"
 
-Defined in http/classes/VLCStatus.ts:60
+Defined in http/classes/VLCStatus.ts:62
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **unknown**: = "unknown"
 
-Defined in http/classes/VLCStatus.ts:63
+Defined in http/classes/VLCStatus.ts:65
