@@ -138,20 +138,20 @@ export interface Stream1 {
 }
 
 export interface Meta {
-    description?: string;
-    date?: string;
-    genre?: string;
-    track_total?: string;
-    album?: string;
-    track_number?: string;
-    filename?: string;
-    now_playing?: string;
-    publisher?: string;
-    copyright?: string;
-    artist?: string;
-    language?: string;
-    title?: string;
-    url?: string;
+    description: string;
+    date: string;
+    genre: string;
+    track_total: string;
+    album: string;
+    track_number: string;
+    filename: string;
+    now_playing: string;
+    publisher: string;
+    copyright: string;
+    artist: string;
+    language: string;
+    title: string;
+    url: string;
     episodeNumber: number;
     seasonNumber: number;
     showName: string;

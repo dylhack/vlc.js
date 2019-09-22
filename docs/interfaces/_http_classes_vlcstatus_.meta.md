@@ -10,61 +10,61 @@
 
 ### Properties
 
-* [album](_http_classes_vlcstatus_.meta.md#optional-album)
-* [artist](_http_classes_vlcstatus_.meta.md#optional-artist)
-* [copyright](_http_classes_vlcstatus_.meta.md#optional-copyright)
-* [date](_http_classes_vlcstatus_.meta.md#optional-date)
-* [description](_http_classes_vlcstatus_.meta.md#optional-description)
+* [album](_http_classes_vlcstatus_.meta.md#album)
+* [artist](_http_classes_vlcstatus_.meta.md#artist)
+* [copyright](_http_classes_vlcstatus_.meta.md#copyright)
+* [date](_http_classes_vlcstatus_.meta.md#date)
+* [description](_http_classes_vlcstatus_.meta.md#description)
 * [episodeNumber](_http_classes_vlcstatus_.meta.md#episodenumber)
-* [filename](_http_classes_vlcstatus_.meta.md#optional-filename)
-* [genre](_http_classes_vlcstatus_.meta.md#optional-genre)
-* [language](_http_classes_vlcstatus_.meta.md#optional-language)
-* [now_playing](_http_classes_vlcstatus_.meta.md#optional-now_playing)
-* [publisher](_http_classes_vlcstatus_.meta.md#optional-publisher)
+* [filename](_http_classes_vlcstatus_.meta.md#filename)
+* [genre](_http_classes_vlcstatus_.meta.md#genre)
+* [language](_http_classes_vlcstatus_.meta.md#language)
+* [now_playing](_http_classes_vlcstatus_.meta.md#now_playing)
+* [publisher](_http_classes_vlcstatus_.meta.md#publisher)
 * [seasonNumber](_http_classes_vlcstatus_.meta.md#seasonnumber)
 * [showName](_http_classes_vlcstatus_.meta.md#showname)
-* [title](_http_classes_vlcstatus_.meta.md#optional-title)
-* [track_number](_http_classes_vlcstatus_.meta.md#optional-track_number)
-* [track_total](_http_classes_vlcstatus_.meta.md#optional-track_total)
-* [url](_http_classes_vlcstatus_.meta.md#optional-url)
+* [title](_http_classes_vlcstatus_.meta.md#title)
+* [track_number](_http_classes_vlcstatus_.meta.md#track_number)
+* [track_total](_http_classes_vlcstatus_.meta.md#track_total)
+* [url](_http_classes_vlcstatus_.meta.md#url)
 
 ## Properties
 
-### `Optional` album
+###  album
 
-• **album**? : *undefined | string*
+• **album**: *string*
 
 Defined in http/classes/VLCStatus.ts:145
 
 ___
 
-### `Optional` artist
+###  artist
 
-• **artist**? : *undefined | string*
+• **artist**: *string*
 
 Defined in http/classes/VLCStatus.ts:151
 
 ___
 
-### `Optional` copyright
+###  copyright
 
-• **copyright**? : *undefined | string*
+• **copyright**: *string*
 
 Defined in http/classes/VLCStatus.ts:150
 
 ___
 
-### `Optional` date
+###  date
 
-• **date**? : *undefined | string*
+• **date**: *string*
 
 Defined in http/classes/VLCStatus.ts:142
 
 ___
 
-### `Optional` description
+###  description
 
-• **description**? : *undefined | string*
+• **description**: *string*
 
 Defined in http/classes/VLCStatus.ts:141
 
@@ -78,41 +78,41 @@ Defined in http/classes/VLCStatus.ts:155
 
 ___
 
-### `Optional` filename
+###  filename
 
-• **filename**? : *undefined | string*
+• **filename**: *string*
 
 Defined in http/classes/VLCStatus.ts:147
 
 ___
 
-### `Optional` genre
+###  genre
 
-• **genre**? : *undefined | string*
+• **genre**: *string*
 
 Defined in http/classes/VLCStatus.ts:143
 
 ___
 
-### `Optional` language
+###  language
 
-• **language**? : *undefined | string*
+• **language**: *string*
 
 Defined in http/classes/VLCStatus.ts:152
 
 ___
 
-### `Optional` now_playing
+###  now_playing
 
-• **now_playing**? : *undefined | string*
+• **now_playing**: *string*
 
 Defined in http/classes/VLCStatus.ts:148
 
 ___
 
-### `Optional` publisher
+###  publisher
 
-• **publisher**? : *undefined | string*
+• **publisher**: *string*
 
 Defined in http/classes/VLCStatus.ts:149
 
@@ -134,32 +134,32 @@ Defined in http/classes/VLCStatus.ts:157
 
 ___
 
-### `Optional` title
+###  title
 
-• **title**? : *undefined | string*
+• **title**: *string*
 
 Defined in http/classes/VLCStatus.ts:153
 
 ___
 
-### `Optional` track_number
+###  track_number
 
-• **track_number**? : *undefined | string*
+• **track_number**: *string*
 
 Defined in http/classes/VLCStatus.ts:146
 
 ___
 
-### `Optional` track_total
+###  track_total
 
-• **track_total**? : *undefined | string*
+• **track_total**: *string*
 
 Defined in http/classes/VLCStatus.ts:144
 
 ___
 
-### `Optional` url
+###  url
 
-• **url**? : *undefined | string*
+• **url**: *string*
 
 Defined in http/classes/VLCStatus.ts:154
