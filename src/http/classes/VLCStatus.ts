@@ -21,7 +21,7 @@ export class VLCStatus {
     public readonly loop: boolean;
     public readonly version: string;
     public readonly position: number;
-    public readonly date?: number;
+    public readonly date?: string;
     public readonly information?: Information;
     public readonly repeat: boolean;
     public readonly subtitledelay: number;
@@ -65,42 +65,42 @@ export enum VLCPlaylistStatus {
     unknown = 'unknown'
 }
 
-export type AudioFilters = {
-    filter_0?: string;
-    filter_1?: string;
-    filter_2?: string;
-    filter_3?: string;
-    filter_4?: string;
+export interface AudioFilters {
+    filter_0: string;
+    filter_1: string;
+    filter_2: string;
+    filter_3: string;
+    filter_4: string;
 }
 
-export type Equalizer = {
+export interface Equalizer {
     presets: Presets;
     bands: { [key: string]: number };
     preamp: number;
 }
 
-export type Presets = {
-    "preset id=\"8\""?: string;
-    "preset id=\"4\""?: string;
-    "preset id=\"17\""?: string;
-    "preset id=\"10\""?: string;
-    "preset id=\"9\""?: string;
-    "preset id=\"15\""?: string;
-    "preset id=\"14\""?: string;
-    "preset id=\"16\""?: string;
-    "preset id=\"11\""?: string;
-    "preset id=\"13\""?: string;
-    "preset id=\"5\""?: string;
-    "preset id=\"7\""?: string;
-    "preset id=\"12\""?: string;
-    "preset id=\"2\""?: string;
-    "preset id=\"6\""?: string;
-    "preset id=\"3\""?: string;
-    "preset id=\"1\""?: string;
-    "preset id=\"0\""?: string;
+export interface Presets {
+    "preset id=\"0\"": string;
+    "preset id=\"1\"": string;
+    "preset id=\"2\"": string;
+    "preset id=\"3\"": string;
+    "preset id=\"4\"": string;
+    "preset id=\"5\"": string;
+    "preset id=\"6\"": string;
+    "preset id=\"7\"": string;
+    "preset id=\"8\"": string;
+    "preset id=\"9\"": string;
+    "preset id=\"10\"": string;
+    "preset id=\"11\"": string;
+    "preset id=\"12\"": string;
+    "preset id=\"13\"": string;
+    "preset id=\"14\"": string;
+    "preset id=\"15\"": string;
+    "preset id=\"16\"": string;
+    "preset id=\"17\"": string;
 }
 
-export type Information = {
+export interface Information {
     chapter: number;
     chapters: any[];
     title: number;
@@ -108,41 +108,44 @@ export type Information = {
     titles: any[];
 }
 
-export type Category = {
-    meta: Meta;
+export interface Category {
     "Stream 0": Stream0;
+    "Stream 1": Stream1;
+    meta: Meta;
 }
 
-export type Stream0 = {
-    Bitrate: string;
+export interface Stream0 {
+    Decoded_format: string;
+    Color_transfer_function: string;
+    Chroma_location: string;
+    Video_resolution: string;
+    Frame_rate: string;
+    Codec: string;
+    Orientation: string;
+    Color_space: string;
+    Type: string;
+    Color_primaries: string;
+    Buffer_dimensions: string;
+}
+
+export interface Stream1 {
     Codec: string;
     Channels: string;
-    Bits_per_sample: string;
     Type: string;
+    Bits_per_sample: string;
+    Language: string;
     Sample_rate: string;
 }
 
-export type Meta = {
-    description?: string;
-    date?: string;
-    genre?: string;
-    track_total?: string;
-    album?: string;
-    track_number?: string;
-    filename?: string;
-    now_playing?: string;
-    publisher?: string;
-    copyright?: string;
-    artist?: string;
-    language?: string;
-    title?: string;
-    url?: string;
-    episodeNumber?: string;
-    seasonNumber?: string;
-    showName?: string;
+export interface Meta {
+    filename: string;
+    title: string;
+    url: string;
+    description: string;
+    artwork_url: string;
 }
 
-export type VideoEffects = {
+export interface VideoEffects {
     hue: number;
     saturation: number;
     contrast: number;

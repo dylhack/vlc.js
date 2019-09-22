@@ -78,7 +78,7 @@ ___
 
 ###  audiofilters
 
-• **audiofilters**: *[AudioFilters](../modules/_http_classes_vlcstatus_.md#audiofilters)*
+• **audiofilters**: *[AudioFilters](../interfaces/_http_classes_vlcstatus_.audiofilters.md)*
 
 Defined in http/classes/VLCStatus.ts:17
 
@@ -94,7 +94,7 @@ ___
 
 ### `Optional` date
 
-• **date**? : *undefined | number*
+• **date**? : *undefined | string*
 
 Defined in http/classes/VLCStatus.ts:24
 
@@ -102,7 +102,7 @@ ___
 
 ###  equalizer
 
-• **equalizer**: *[Equalizer](../modules/_http_classes_vlcstatus_.md#equalizer)[]*
+• **equalizer**: *[Equalizer](../interfaces/_http_classes_vlcstatus_.equalizer.md)[]*
 
 Defined in http/classes/VLCStatus.ts:28
 
@@ -118,7 +118,7 @@ ___
 
 ### `Optional` information
 
-• **information**? : *[Information](../modules/_http_classes_vlcstatus_.md#information)*
+• **information**? : *[Information](../interfaces/_http_classes_vlcstatus_.information.md)*
 
 Defined in http/classes/VLCStatus.ts:25
 
@@ -214,7 +214,7 @@ ___
 
 ###  videoeffects
 
-• **videoeffects**: *[VideoEffects](../modules/_http_classes_vlcstatus_.md#videoeffects)*
+• **videoeffects**: *[VideoEffects](../interfaces/_http_classes_vlcstatus_.videoeffects.md)*
 
 Defined in http/classes/VLCStatus.ts:19
 

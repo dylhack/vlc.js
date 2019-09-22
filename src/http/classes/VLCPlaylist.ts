@@ -27,7 +27,7 @@ export class VLCPlaylist {
     }
 }
 
-export type VLCPlaylistChild = {
+export interface VLCPlaylistChild {
     ro: string;
     type: string;
     name: string;
@@ -35,7 +35,7 @@ export type VLCPlaylistChild = {
     children: ChildChild[];
 }
 
-export type ChildChild = {
+export interface ChildChild {
     ro: string;
     type: string;
     name: string;

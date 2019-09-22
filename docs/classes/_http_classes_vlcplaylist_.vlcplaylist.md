@@ -45,7 +45,7 @@ Name | Type | Description |
 
 ###  children
 
-• **children**: *[VLCPlaylistChild](../modules/_http_classes_vlcplaylist_.md#vlcplaylistchild)[]*
+• **children**: *[VLCPlaylistChild](../interfaces/_http_classes_vlcplaylist_.vlcplaylistchild.md)[]*
 
 Defined in http/classes/VLCPlaylist.ts:11
 
