@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["http/Requester"](_http_requester_.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/Requester"](_http_requester_.md)
 
 # External module: "http/Requester"
 

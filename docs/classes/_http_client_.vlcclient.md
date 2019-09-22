@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["http/Client"](../modules/_http_client_.md) › [VLCClient](_http_client_.vlcclient.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/Client"](../modules/_http_client_.md) › [VLCClient](_http_client_.vlcclient.md)
 
 # Class: VLCClient
 

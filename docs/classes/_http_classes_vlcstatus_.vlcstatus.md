@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)
 
 # Class: VLCStatus
 
@@ -77,7 +77,7 @@ ___
 
 ###  audiofilters
 
-• **audiofilters**: *[AudioFilters](../interfaces/_http_classes_vlcstatus_.audiofilters.md)*
+• **audiofilters**: *[AudioFilters](../modules/_http_classes_vlcstatus_.md#audiofilters)*
 
 Defined in http/classes/VLCStatus.ts:17
 
@@ -93,7 +93,7 @@ ___
 
 ###  equalizer
 
-• **equalizer**: *[Equalizer](../interfaces/_http_classes_vlcstatus_.equalizer.md)[]*
+• **equalizer**: *[Equalizer](../modules/_http_classes_vlcstatus_.md#equalizer)[]*
 
 Defined in http/classes/VLCStatus.ts:27
 
@@ -109,7 +109,7 @@ ___
 
 ###  information
 
-• **information**: *[Information](../interfaces/_http_classes_vlcstatus_.information.md) | undefined*
+• **information**: *[Information](../modules/_http_classes_vlcstatus_.md#information) | undefined*
 
 Defined in http/classes/VLCStatus.ts:24
 
@@ -205,7 +205,7 @@ ___
 
 ###  videoeffects
 
-• **videoeffects**: *[VideoEffects](../interfaces/_http_classes_vlcstatus_.videoeffects.md)*
+• **videoeffects**: *[VideoEffects](../modules/_http_classes_vlcstatus_.md#videoeffects)*
 
 Defined in http/classes/VLCStatus.ts:19
 

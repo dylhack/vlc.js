@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["util/VLCRCModifier"](_util_vlcrcmodifier_.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["util/VLCRCModifier"](_util_vlcrcmodifier_.md)
 
 # External module: "util/VLCRCModifier"
 

@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCPlaylistStatus](_http_classes_vlcstatus_.vlcplayliststatus.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCStatus"](../modules/_http_classes_vlcstatus_.md) › [VLCPlaylistStatus](_http_classes_vlcstatus_.vlcplayliststatus.md)
 
 # Enumeration: VLCPlaylistStatus
 

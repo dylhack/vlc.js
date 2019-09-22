@@ -1,6 +1,6 @@
-[vlc.js](README.md) › [Globals](globals.md)
+[@dylhack/vlc.js](README.md) › [Globals](globals.md)
 
-# vlc.js
+# @dylhack/vlc.js
 
 ## Index
 

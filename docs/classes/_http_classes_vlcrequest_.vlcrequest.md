@@ -1,4 +1,4 @@
-[vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCRequest"](../modules/_http_classes_vlcrequest_.md) › [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)
+[@dylhack/vlc.js](../README.md) › [Globals](../globals.md) › ["http/classes/VLCRequest"](../modules/_http_classes_vlcrequest_.md) › [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)
 
 # Class: VLCRequest
 
