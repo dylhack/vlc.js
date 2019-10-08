@@ -1,16 +1,13 @@
 /**
  * @module Requester
- * @description This module handles ALL the HTTP interactions with VLCs' HTTP server. All the commands can be found
- * here.
+ * @description This module handles ALL the HTTP interactions with VLCs' HTTP server. All the
+ *     commands can be found here.
  * @author dylhack
  */
-import * as http from 'http';
-import {IncomingMessage} from 'http';
-import {Buffer} from 'buffer';
-import {VLCStatus} from "./classes/VLCStatus";
-import {VLCRequest} from "./classes/VLCRequest";
-import {VLCError} from "./classes/VLCError";
-import {VLCPlaylist} from "./classes/VLCPlaylist";
+import { Buffer }                                       from 'buffer';
+import * as http                                        from 'http';
+import { IncomingMessage }                              from 'http';
+import { VLCError, VLCPlaylist, VLCRequest, VLCStatus } from './classes/';
 
 /**
  * @interface VLCCredentials
@@ -27,8 +24,8 @@ export type VLCCredentials = {
 
 /**
  * @enum VLCCommand
- * @description These are all the available commands that the HTTP server can take. These commands were pulled from the
- * source code and was last updated September 10th, 2019.
+ * @description These are all the available commands that the HTTP server can take. These commands
+ *     were pulled from the source code and was last updated September 10th, 2019.
  * @link https://github.com/videolan/vlc/blob/master/share/lua/intf/modules/httprequests.lua
  */
 export const enum VLCCommand {
@@ -76,7 +73,7 @@ export const enum VLCCommand {
  * @param {String[]} query
  * @returns {Promise<VLCStatus>}
  */
-export async function command(details: VLCCredentials, vlcCommand: VLCCommand, query: string[] | undefined = undefined): Promise<VLCStatus> {
+export function command(details: VLCCredentials, vlcCommand: VLCCommand, query?: string[]): Promise<VLCStatus> {
     let address = new URL(`http://${details.address}:${details.port}/requests/status.json?command=${vlcCommand}`);
     if (query) query.forEach((queue: string) => {
         if (queue.includes('=')) {
@@ -85,34 +82,57 @@ export async function command(details: VLCCredentials, vlcCommand: VLCCommand, q
             address.searchParams.append(key, value)
         } else address.searchParams.append(queue, '')
     });
-    const vlcRequest = await _request(address, details);
-    if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
-        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
-    else return new VLCStatus(vlcRequest);
+    return new Promise((resolve, reject) => {
+        _request(address, details)
+            .then((vlcRequest: VLCRequest) => {
+                if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
+                    || vlcRequest.data.includes('<title>Client error</title>')) {
+                    reject(new VLCError(vlcRequest));
+                } else {
+                    resolve(new VLCStatus(vlcRequest));
+                }
+            })
+            .catch(reject);
+    });
 }
 
 /**
  * @param {VLCCredentials} details
  * @returns {Promise<VLCStatus>}
  */
-export async function getStatus(details: VLCCredentials): Promise<VLCStatus> {
-    let address = new URL(`http://${details.address}:${details.port}/requests/status.json`);
-    const vlcRequest = await _request(address, details);
-    if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
-        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
-    return new VLCStatus(vlcRequest)
+export function getStatus(details: VLCCredentials): Promise<VLCStatus> {
+    return new Promise((resolve, reject) => {
+        let address = new URL(`http://${details.address}:${details.port}/requests/status.json`);
+        _request(address, details)
+            .then((vlcRequest: VLCRequest) => {
+                if (vlcRequest.data.includes('<title>Error loading /requests/status.json</title>')
+                    || vlcRequest.data.includes('<title>Client error</title>')) {
+                    reject(new VLCError(vlcRequest));
+                }
+                resolve(new VLCStatus(vlcRequest));
+            })
+            .catch(reject);
+    });
 }
 
 /**
  * @param {VLCCredentials} details
  * @returns {Promise<VLCPlaylist>}
  */
-export async function getPlaylist(details: VLCCredentials): Promise<VLCPlaylist> {
-    let address = new URL(`http://${details.address}:${details.port}/requests/playlist.json`);
-    const vlcRequest = await _request(address, details);
-    if (vlcRequest.data.includes('<title>Error loading /requests/playlist.json</title>')
-        || vlcRequest.data.includes('<title>Client error</title>')) throw new VLCError(vlcRequest);
-    return new VLCPlaylist(vlcRequest)
+export function getPlaylist(details: VLCCredentials): Promise<VLCPlaylist> {
+    return new Promise((resolve, reject) => {
+        let address = new URL(`http://${details.address}:${details.port}/requests/playlist.json`);
+        _request(address, details)
+            .then((vlcRequest: VLCRequest) => {
+                if (vlcRequest.data.includes('<title>Error loading /requests/playlist.json</title>')
+                    || vlcRequest.data.includes('<title>Client error</title>')) {
+                    reject(new VLCError(vlcRequest));
+                }
+                resolve(new VLCPlaylist(vlcRequest));
+
+            })
+            .catch(reject);
+    });
 }
 
 /**
@@ -132,12 +152,12 @@ export function _request(address: URL, details: VLCCredentials): Promise<VLCRequ
             }
         });
         req.on('response', (res: IncomingMessage) => {
-            req.on('error', reject);
             res.on('data', (chunk: Buffer) => data += chunk);
             res.on('end', () => {
                 const vlcRequest = new VLCRequest(req, res, Buffer.from(data));
                 resolve(vlcRequest);
             });
         });
+        req.on('error', reject);
     })
 }

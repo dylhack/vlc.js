@@ -3,10 +3,7 @@
   "version": "3.2.4",
   "description": "A VLC HTTP Endpoint wrapper for NodeJS",
   "main": "lib/src/index",
-  "types": "lib/src/index",
-  "directories": {
-    "test": "test"
-  },
+  "types": "typings/index.d.ts",
   "scripts": {
     "test": "tsc && jest",
     "prepare": "tsc && npm run docs",

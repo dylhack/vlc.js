@@ -1,13 +1,12 @@
-import {command, getPlaylist, getStatus, VLCCommand, VLCCredentials} from "./Requester"
-import {VLCPlaylistStatus, VLCStatus} from "./classes/VLCStatus";
-import {VLCPlaylist} from "./classes/VLCPlaylist";
+import { VLCPlaylist, VLCPlaylistStatus, VLCStatus }                   from './classes';
+import { command, getPlaylist, getStatus, VLCCommand, VLCCredentials } from './Requester';
 
 /**
  * @class VLCClient
  * @description Promise-oriented VLC HTTP endpoint Client.
  */
 export class VLCClient {
-    private readonly details: VLCCredentials;
+    private details: VLCCredentials;
 
     /**
      * @constructor
@@ -94,7 +93,8 @@ export class VLCClient {
     }
 
     /**
-     * @description Play song based on ID If no ID is provided it'll play current song (restart / unpause)
+     * @description Play song based on ID If no ID is provided it'll play current song (restart /
+     *     unpause)
      * @param {String} id
      * @returns {Promise<VLCStatus>}
      */
@@ -157,5 +157,9 @@ export class VLCClient {
      */
     command(vlcCommand: VLCCommand, query: string[] | undefined = undefined): Promise<VLCStatus> {
         return command(this.details, vlcCommand, query)
+    }
+
+    update(details: VLCCredentials) {
+        this.details = details;
     }
 }
