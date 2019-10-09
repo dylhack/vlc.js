@@ -35,7 +35,7 @@
 
 \+ **new VLCError**(`vlcRequest`: [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)): *[VLCError](_http_classes_vlcerror_.vlcerror.md)*
 
-Defined in http/classes/VLCError.ts:11
+*Defined in [http/classes/VLCError.ts:11](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCError.ts#L11)*
 
 **`constructor`** 
 
@@ -53,7 +53,7 @@ Name | Type | Description |
 
 • **command**: *string | string[]*
 
-Defined in http/classes/VLCError.ts:11
+*Defined in [http/classes/VLCError.ts:11](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCError.ts#L11)*
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **vlcRequest**: *[VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)*
 
-Defined in http/classes/VLCError.ts:10
+*Defined in [http/classes/VLCError.ts:10](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCError.ts#L10)*
 
 ___
 

@@ -22,7 +22,7 @@
 
 • **children**: *[ChildChild](_http_classes_vlcplaylist_.childchild.md)[]*
 
-Defined in http/classes/VLCPlaylist.ts:35
+*Defined in [http/classes/VLCPlaylist.ts:35](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L35)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **id**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:34
+*Defined in [http/classes/VLCPlaylist.ts:34](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L34)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **name**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:33
+*Defined in [http/classes/VLCPlaylist.ts:33](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L33)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **ro**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:31
+*Defined in [http/classes/VLCPlaylist.ts:31](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L31)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **type**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:32
+*Defined in [http/classes/VLCPlaylist.ts:32](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L32)*

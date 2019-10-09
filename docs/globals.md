@@ -12,5 +12,6 @@
 * ["http/classes/VLCPlaylist"](modules/_http_classes_vlcplaylist_.md)
 * ["http/classes/VLCRequest"](modules/_http_classes_vlcrequest_.md)
 * ["http/classes/VLCStatus"](modules/_http_classes_vlcstatus_.md)
+* ["http/classes/index"](modules/_http_classes_index_.md)
 * ["index"](modules/_index_.md)
 * ["util/VLCRCModifier"](modules/_util_vlcrcmodifier_.md)

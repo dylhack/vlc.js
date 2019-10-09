@@ -35,7 +35,7 @@
 
 • **preset id="0"**: *string*
 
-Defined in http/classes/VLCStatus.ts:83
+*Defined in [http/classes/VLCStatus.ts:83](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L83)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **preset id="1"**: *string*
 
-Defined in http/classes/VLCStatus.ts:84
+*Defined in [http/classes/VLCStatus.ts:84](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L84)*
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **preset id="10"**: *string*
 
-Defined in http/classes/VLCStatus.ts:93
+*Defined in [http/classes/VLCStatus.ts:93](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L93)*
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **preset id="11"**: *string*
 
-Defined in http/classes/VLCStatus.ts:94
+*Defined in [http/classes/VLCStatus.ts:94](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L94)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **preset id="12"**: *string*
 
-Defined in http/classes/VLCStatus.ts:95
+*Defined in [http/classes/VLCStatus.ts:95](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L95)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 • **preset id="13"**: *string*
 
-Defined in http/classes/VLCStatus.ts:96
+*Defined in [http/classes/VLCStatus.ts:96](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L96)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **preset id="14"**: *string*
 
-Defined in http/classes/VLCStatus.ts:97
+*Defined in [http/classes/VLCStatus.ts:97](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L97)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 • **preset id="15"**: *string*
 
-Defined in http/classes/VLCStatus.ts:98
+*Defined in [http/classes/VLCStatus.ts:98](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L98)*
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 • **preset id="16"**: *string*
 
-Defined in http/classes/VLCStatus.ts:99
+*Defined in [http/classes/VLCStatus.ts:99](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L99)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 • **preset id="17"**: *string*
 
-Defined in http/classes/VLCStatus.ts:100
+*Defined in [http/classes/VLCStatus.ts:100](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L100)*
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 • **preset id="2"**: *string*
 
-Defined in http/classes/VLCStatus.ts:85
+*Defined in [http/classes/VLCStatus.ts:85](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L85)*
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 • **preset id="3"**: *string*
 
-Defined in http/classes/VLCStatus.ts:86
+*Defined in [http/classes/VLCStatus.ts:86](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L86)*
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 • **preset id="4"**: *string*
 
-Defined in http/classes/VLCStatus.ts:87
+*Defined in [http/classes/VLCStatus.ts:87](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L87)*
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 • **preset id="5"**: *string*
 
-Defined in http/classes/VLCStatus.ts:88
+*Defined in [http/classes/VLCStatus.ts:88](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L88)*
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 • **preset id="6"**: *string*
 
-Defined in http/classes/VLCStatus.ts:89
+*Defined in [http/classes/VLCStatus.ts:89](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L89)*
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 • **preset id="7"**: *string*
 
-Defined in http/classes/VLCStatus.ts:90
+*Defined in [http/classes/VLCStatus.ts:90](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L90)*
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 • **preset id="8"**: *string*
 
-Defined in http/classes/VLCStatus.ts:91
+*Defined in [http/classes/VLCStatus.ts:91](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L91)*
 
 ___
 
@@ -171,4 +171,4 @@ ___
 
 • **preset id="9"**: *string*
 
-Defined in http/classes/VLCStatus.ts:92
+*Defined in [http/classes/VLCStatus.ts:92](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L92)*

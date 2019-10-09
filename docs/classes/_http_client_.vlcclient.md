@@ -36,6 +36,7 @@
 * [random](_http_client_.vlcclient.md#random)
 * [remove](_http_client_.vlcclient.md#remove)
 * [repeat](_http_client_.vlcclient.md#repeat)
+* [update](_http_client_.vlcclient.md#update)
 * [volume](_http_client_.vlcclient.md#volume)
 
 ## Constructors
@@ -44,7 +45,7 @@
 
 \+ **new VLCClient**(`details`: [VLCCredentials](../modules/_http_requester_.md#vlccredentials)): *[VLCClient](_http_client_.vlcclient.md)*
 
-Defined in http/Client.ts:10
+*Defined in [http/Client.ts:9](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L9)*
 
 **`constructor`** 
 
@@ -62,7 +63,7 @@ Name | Type | Description |
 
 • **details**: *[VLCCredentials](../modules/_http_requester_.md#vlccredentials)*
 
-Defined in http/Client.ts:10
+*Defined in [http/Client.ts:9](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L9)*
 
 ## Methods
 
@@ -70,7 +71,7 @@ Defined in http/Client.ts:10
 
 ▸ **add**(`mrl`: string, `play`: boolean | undefined): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:41
+*Defined in [http/Client.ts:40](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L40)*
 
 **`description`** Add song based on MRL (media resource locator)
 
@@ -91,7 +92,7 @@ ___
 
 ▸ **command**(`vlcCommand`: [VLCCommand](../enums/_http_requester_.vlccommand.md), `query`: string[] | undefined): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:158
+*Defined in [http/Client.ts:158](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L158)*
 
 **`description`** Execute a VLC HTTP endpoint command
 
@@ -110,7 +111,7 @@ ___
 
 ▸ **empty**(): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:49
+*Defined in [http/Client.ts:48](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L48)*
 
 **`description`** Clear playlist
 
@@ -122,7 +123,7 @@ ___
 
 ▸ **fullscreen**(`isFullscreen`: boolean): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:57
+*Defined in [http/Client.ts:56](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L56)*
 
 **`description`** Toggle fullscreen (pretty useless)
 
@@ -140,7 +141,7 @@ ___
 
 ▸ **getPlaylist**(): *Promise‹[VLCPlaylist](_http_classes_vlcplaylist_.vlcplaylist.md)›*
 
-Defined in http/Client.ts:30
+*Defined in [http/Client.ts:29](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L29)*
 
 **Returns:** *Promise‹[VLCPlaylist](_http_classes_vlcplaylist_.vlcplaylist.md)›*
 
@@ -150,7 +151,7 @@ ___
 
 ▸ **getStatus**(): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:23
+*Defined in [http/Client.ts:22](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L22)*
 
 **Returns:** *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
@@ -160,7 +161,7 @@ ___
 
 ▸ **loop**(`isLoop`: boolean): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:68
+*Defined in [http/Client.ts:67](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L67)*
 
 **`description`** Loop playlist
 
@@ -178,7 +179,7 @@ ___
 
 ▸ **next**(): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:79
+*Defined in [http/Client.ts:78](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L78)*
 
 **`description`** Play next song
 
@@ -190,7 +191,7 @@ ___
 
 ▸ **pause**(`isPaused`: true): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:87
+*Defined in [http/Client.ts:86](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L86)*
 
 **`description`** Pause current song
 
@@ -208,9 +209,10 @@ ___
 
 ▸ **play**(`id`: string): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:101
+*Defined in [http/Client.ts:101](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L101)*
 
-**`description`** Play song based on ID If no ID is provided it'll play current song (restart / unpause)
+**`description`** Play song based on ID If no ID is provided it'll play current song (restart /
+    unpause)
 
 **Parameters:**
 
@@ -226,7 +228,7 @@ ___
 
 ▸ **previous**(): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:109
+*Defined in [http/Client.ts:109](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L109)*
 
 **`description`** Play previous song
 
@@ -238,7 +240,7 @@ ___
 
 ▸ **random**(`isRandom`: boolean): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:137
+*Defined in [http/Client.ts:137](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L137)*
 
 **`description`** Randomize the playlist
 
@@ -256,7 +258,7 @@ ___
 
 ▸ **remove**(`id`: string): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:118
+*Defined in [http/Client.ts:118](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L118)*
 
 **`description`** Remove song based on ID. If an ID isn't provided it'll remove current song
 
@@ -274,7 +276,7 @@ ___
 
 ▸ **repeat**(`isRepeat`: boolean): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:126
+*Defined in [http/Client.ts:126](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L126)*
 
 **`description`** Repeat the current song
 
@@ -288,11 +290,27 @@ Name | Type |
 
 ___
 
+###  update
+
+▸ **update**(`details`: [VLCCredentials](../modules/_http_requester_.md#vlccredentials)): *void*
+
+*Defined in [http/Client.ts:162](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L162)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`details` | [VLCCredentials](../modules/_http_requester_.md#vlccredentials) |
+
+**Returns:** *void*
+
+___
+
 ###  volume
 
 ▸ **volume**(`value`: number | string): *Promise‹[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Client.ts:149
+*Defined in [http/Client.ts:149](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Client.ts#L149)*
 
 **`description`** Set volume
 

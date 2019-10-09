@@ -29,7 +29,7 @@
 
 \+ **new VLCPlaylist**(`request`: [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)): *[VLCPlaylist](_http_classes_vlcplaylist_.vlcplaylist.md)*
 
-Defined in http/classes/VLCPlaylist.ts:12
+*Defined in [http/classes/VLCPlaylist.ts:12](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L12)*
 
 **`constructor`** 
 
@@ -47,7 +47,7 @@ Name | Type | Description |
 
 • **children**: *[VLCPlaylistChild](../interfaces/_http_classes_vlcplaylist_.vlcplaylistchild.md)[]*
 
-Defined in http/classes/VLCPlaylist.ts:11
+*Defined in [http/classes/VLCPlaylist.ts:11](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L11)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **id**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:10
+*Defined in [http/classes/VLCPlaylist.ts:10](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L10)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **name**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:9
+*Defined in [http/classes/VLCPlaylist.ts:9](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L9)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **request**: *[VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)*
 
-Defined in http/classes/VLCPlaylist.ts:12
+*Defined in [http/classes/VLCPlaylist.ts:12](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L12)*
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 • **ro**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:7
+*Defined in [http/classes/VLCPlaylist.ts:7](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L7)*
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 • **type**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:8
+*Defined in [http/classes/VLCPlaylist.ts:8](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCPlaylist.ts#L8)*

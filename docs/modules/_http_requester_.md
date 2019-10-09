@@ -25,7 +25,7 @@
 
 Ƭ **VLCCredentials**: *object*
 
-Defined in http/Requester.ts:22
+*Defined in [http/Requester.ts:19](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Requester.ts#L19)*
 
 **`interface`** VLCCredentials
 
@@ -51,7 +51,7 @@ Defined in http/Requester.ts:22
 
 ▸ **_request**(`address`: URL, `details`: [VLCCredentials](_http_requester_.md#vlccredentials)): *Promise‹[VLCRequest](../classes/_http_classes_vlcrequest_.vlcrequest.md)›*
 
-Defined in http/Requester.ts:124
+*Defined in [http/Requester.ts:144](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Requester.ts#L144)*
 
 **Parameters:**
 
@@ -66,17 +66,17 @@ ___
 
 ###  command
 
-▸ **command**(`details`: [VLCCredentials](_http_requester_.md#vlccredentials), `vlcCommand`: [VLCCommand](../enums/_http_requester_.vlccommand.md), `query`: string[] | undefined): *Promise‹[VLCStatus](../classes/_http_classes_vlcstatus_.vlcstatus.md)›*
+▸ **command**(`details`: [VLCCredentials](_http_requester_.md#vlccredentials), `vlcCommand`: [VLCCommand](../enums/_http_requester_.vlccommand.md), `query?`: string[]): *Promise‹[VLCStatus](../classes/_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Requester.ts:79
+*Defined in [http/Requester.ts:76](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Requester.ts#L76)*
 
 **Parameters:**
 
-Name | Type | Default |
------- | ------ | ------ |
-`details` | [VLCCredentials](_http_requester_.md#vlccredentials) | - |
-`vlcCommand` | [VLCCommand](../enums/_http_requester_.vlccommand.md) | - |
-`query` | string[] &#124; undefined |  undefined |
+Name | Type |
+------ | ------ |
+`details` | [VLCCredentials](_http_requester_.md#vlccredentials) |
+`vlcCommand` | [VLCCommand](../enums/_http_requester_.vlccommand.md) |
+`query?` | string[] |
 
 **Returns:** *Promise‹[VLCStatus](../classes/_http_classes_vlcstatus_.vlcstatus.md)›*
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **getPlaylist**(`details`: [VLCCredentials](_http_requester_.md#vlccredentials)): *Promise‹[VLCPlaylist](../classes/_http_classes_vlcplaylist_.vlcplaylist.md)›*
 
-Defined in http/Requester.ts:110
+*Defined in [http/Requester.ts:122](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Requester.ts#L122)*
 
 **Parameters:**
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **getStatus**(`details`: [VLCCredentials](_http_requester_.md#vlccredentials)): *Promise‹[VLCStatus](../classes/_http_classes_vlcstatus_.vlcstatus.md)›*
 
-Defined in http/Requester.ts:98
+*Defined in [http/Requester.ts:103](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/Requester.ts#L103)*
 
 **Parameters:**
 

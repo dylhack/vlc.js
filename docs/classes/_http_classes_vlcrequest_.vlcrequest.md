@@ -28,7 +28,7 @@
 
 \+ **new VLCRequest**(`req`: ClientRequest, `res`: IncomingMessage, `data`: Buffer): *[VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)*
 
-Defined in http/classes/VLCRequest.ts:10
+*Defined in [http/classes/VLCRequest.ts:10](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCRequest.ts#L10)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 • **data**: *Buffer*
 
-Defined in http/classes/VLCRequest.ts:10
+*Defined in [http/classes/VLCRequest.ts:10](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCRequest.ts#L10)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **request**: *ClientRequest*
 
-Defined in http/classes/VLCRequest.ts:9
+*Defined in [http/classes/VLCRequest.ts:9](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCRequest.ts#L9)*
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **response**: *IncomingMessage*
 
-Defined in http/classes/VLCRequest.ts:8
+*Defined in [http/classes/VLCRequest.ts:8](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCRequest.ts#L8)*

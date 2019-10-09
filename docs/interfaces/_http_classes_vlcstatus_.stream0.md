@@ -28,7 +28,7 @@
 
 • **Buffer_dimensions**: *string*
 
-Defined in http/classes/VLCStatus.ts:128
+*Defined in [http/classes/VLCStatus.ts:128](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L128)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **Chroma_location**: *string*
 
-Defined in http/classes/VLCStatus.ts:120
+*Defined in [http/classes/VLCStatus.ts:120](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L120)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **Codec**: *string*
 
-Defined in http/classes/VLCStatus.ts:123
+*Defined in [http/classes/VLCStatus.ts:123](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L123)*
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 • **Color_primaries**: *string*
 
-Defined in http/classes/VLCStatus.ts:127
+*Defined in [http/classes/VLCStatus.ts:127](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L127)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **Color_space**: *string*
 
-Defined in http/classes/VLCStatus.ts:125
+*Defined in [http/classes/VLCStatus.ts:125](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L125)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **Color_transfer_function**: *string*
 
-Defined in http/classes/VLCStatus.ts:119
+*Defined in [http/classes/VLCStatus.ts:119](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L119)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 • **Decoded_format**: *string*
 
-Defined in http/classes/VLCStatus.ts:118
+*Defined in [http/classes/VLCStatus.ts:118](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L118)*
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 • **Frame_rate**: *string*
 
-Defined in http/classes/VLCStatus.ts:122
+*Defined in [http/classes/VLCStatus.ts:122](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L122)*
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 • **Orientation**: *string*
 
-Defined in http/classes/VLCStatus.ts:124
+*Defined in [http/classes/VLCStatus.ts:124](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L124)*
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 • **Type**: *string*
 
-Defined in http/classes/VLCStatus.ts:126
+*Defined in [http/classes/VLCStatus.ts:126](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L126)*
 
 ___
 
@@ -108,4 +108,4 @@ ___
 
 • **Video_resolution**: *string*
 
-Defined in http/classes/VLCStatus.ts:121
+*Defined in [http/classes/VLCStatus.ts:121](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L121)*

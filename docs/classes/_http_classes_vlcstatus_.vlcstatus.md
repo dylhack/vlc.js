@@ -46,7 +46,7 @@
 
 \+ **new VLCStatus**(`vlcRequest`: [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)): *[VLCStatus](_http_classes_vlcstatus_.vlcstatus.md)*
 
-Defined in http/classes/VLCStatus.ts:28
+*Defined in [http/classes/VLCStatus.ts:28](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L28)*
 
 **`constructor`** 
 
@@ -64,7 +64,7 @@ Name | Type | Description |
 
 • **apiversion**: *number*
 
-Defined in http/classes/VLCStatus.ts:11
+*Defined in [http/classes/VLCStatus.ts:11](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L11)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **audiodelay**: *number*
 
-Defined in http/classes/VLCStatus.ts:10
+*Defined in [http/classes/VLCStatus.ts:10](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L10)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • **audiofilters**: *[AudioFilters](../interfaces/_http_classes_vlcstatus_.audiofilters.md)*
 
-Defined in http/classes/VLCStatus.ts:17
+*Defined in [http/classes/VLCStatus.ts:17](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L17)*
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **currentplid**: *number*
 
-Defined in http/classes/VLCStatus.ts:12
+*Defined in [http/classes/VLCStatus.ts:12](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L12)*
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **date**? : *undefined | string*
 
-Defined in http/classes/VLCStatus.ts:24
+*Defined in [http/classes/VLCStatus.ts:24](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L24)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 • **equalizer**: *[Equalizer](../interfaces/_http_classes_vlcstatus_.equalizer.md)[]*
 
-Defined in http/classes/VLCStatus.ts:28
+*Defined in [http/classes/VLCStatus.ts:28](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L28)*
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 • **fullscreen**: *boolean*
 
-Defined in http/classes/VLCStatus.ts:8
+*Defined in [http/classes/VLCStatus.ts:8](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L8)*
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 • **information**? : *[Information](../interfaces/_http_classes_vlcstatus_.information.md)*
 
-Defined in http/classes/VLCStatus.ts:25
+*Defined in [http/classes/VLCStatus.ts:25](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L25)*
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 • **length**: *number*
 
-Defined in http/classes/VLCStatus.ts:15
+*Defined in [http/classes/VLCStatus.ts:15](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L15)*
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 • **loop**: *boolean*
 
-Defined in http/classes/VLCStatus.ts:21
+*Defined in [http/classes/VLCStatus.ts:21](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L21)*
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 • **position**: *number*
 
-Defined in http/classes/VLCStatus.ts:23
+*Defined in [http/classes/VLCStatus.ts:23](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L23)*
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 • **random**: *boolean*
 
-Defined in http/classes/VLCStatus.ts:16
+*Defined in [http/classes/VLCStatus.ts:16](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L16)*
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 • **rate**: *number*
 
-Defined in http/classes/VLCStatus.ts:18
+*Defined in [http/classes/VLCStatus.ts:18](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L18)*
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 • **repeat**: *boolean*
 
-Defined in http/classes/VLCStatus.ts:26
+*Defined in [http/classes/VLCStatus.ts:26](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L26)*
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 • **state**: *[VLCPlaylistStatus](../enums/_http_classes_vlcstatus_.vlcplayliststatus.md)*
 
-Defined in http/classes/VLCStatus.ts:20
+*Defined in [http/classes/VLCStatus.ts:20](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L20)*
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 • **stats**: *object | undefined*
 
-Defined in http/classes/VLCStatus.ts:9
+*Defined in [http/classes/VLCStatus.ts:9](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L9)*
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 • **subtitledelay**: *number*
 
-Defined in http/classes/VLCStatus.ts:27
+*Defined in [http/classes/VLCStatus.ts:27](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L27)*
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 • **time**: *number*
 
-Defined in http/classes/VLCStatus.ts:13
+*Defined in [http/classes/VLCStatus.ts:13](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L13)*
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 • **version**: *string*
 
-Defined in http/classes/VLCStatus.ts:22
+*Defined in [http/classes/VLCStatus.ts:22](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L22)*
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 • **videoeffects**: *[VideoEffects](../interfaces/_http_classes_vlcstatus_.videoeffects.md)*
 
-Defined in http/classes/VLCStatus.ts:19
+*Defined in [http/classes/VLCStatus.ts:19](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L19)*
 
 ___
 
@@ -224,4 +224,4 @@ ___
 
 • **volume**: *number*
 
-Defined in http/classes/VLCStatus.ts:14
+*Defined in [http/classes/VLCStatus.ts:14](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L14)*

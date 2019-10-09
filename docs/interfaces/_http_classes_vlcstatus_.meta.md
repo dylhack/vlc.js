@@ -34,7 +34,7 @@
 
 • **album**: *string*
 
-Defined in http/classes/VLCStatus.ts:145
+*Defined in [http/classes/VLCStatus.ts:145](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L145)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **artist**: *string*
 
-Defined in http/classes/VLCStatus.ts:151
+*Defined in [http/classes/VLCStatus.ts:151](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L151)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **copyright**: *string*
 
-Defined in http/classes/VLCStatus.ts:150
+*Defined in [http/classes/VLCStatus.ts:150](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L150)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **date**: *string*
 
-Defined in http/classes/VLCStatus.ts:142
+*Defined in [http/classes/VLCStatus.ts:142](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L142)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **description**: *string*
 
-Defined in http/classes/VLCStatus.ts:141
+*Defined in [http/classes/VLCStatus.ts:141](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L141)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **episodeNumber**: *number*
 
-Defined in http/classes/VLCStatus.ts:155
+*Defined in [http/classes/VLCStatus.ts:155](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L155)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **filename**: *string*
 
-Defined in http/classes/VLCStatus.ts:147
+*Defined in [http/classes/VLCStatus.ts:147](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L147)*
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 • **genre**: *string*
 
-Defined in http/classes/VLCStatus.ts:143
+*Defined in [http/classes/VLCStatus.ts:143](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L143)*
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 • **language**: *string*
 
-Defined in http/classes/VLCStatus.ts:152
+*Defined in [http/classes/VLCStatus.ts:152](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L152)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 • **now_playing**: *string*
 
-Defined in http/classes/VLCStatus.ts:148
+*Defined in [http/classes/VLCStatus.ts:148](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L148)*
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 • **publisher**: *string*
 
-Defined in http/classes/VLCStatus.ts:149
+*Defined in [http/classes/VLCStatus.ts:149](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L149)*
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 • **seasonNumber**: *number*
 
-Defined in http/classes/VLCStatus.ts:156
+*Defined in [http/classes/VLCStatus.ts:156](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L156)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **showName**: *string*
 
-Defined in http/classes/VLCStatus.ts:157
+*Defined in [http/classes/VLCStatus.ts:157](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L157)*
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 • **title**: *string*
 
-Defined in http/classes/VLCStatus.ts:153
+*Defined in [http/classes/VLCStatus.ts:153](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L153)*
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 • **track_number**: *string*
 
-Defined in http/classes/VLCStatus.ts:146
+*Defined in [http/classes/VLCStatus.ts:146](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L146)*
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 • **track_total**: *string*
 
-Defined in http/classes/VLCStatus.ts:144
+*Defined in [http/classes/VLCStatus.ts:144](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L144)*
 
 ___
 
@@ -162,4 +162,4 @@ ___
 
 • **url**: *string*
 
-Defined in http/classes/VLCStatus.ts:154
+*Defined in [http/classes/VLCStatus.ts:154](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L154)*

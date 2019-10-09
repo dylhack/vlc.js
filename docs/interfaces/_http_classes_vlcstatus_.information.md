@@ -22,7 +22,7 @@
 
 • **category**: *[Category](_http_classes_vlcstatus_.category.md)*
 
-Defined in http/classes/VLCStatus.ts:107
+*Defined in [http/classes/VLCStatus.ts:107](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L107)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **chapter**: *number*
 
-Defined in http/classes/VLCStatus.ts:104
+*Defined in [http/classes/VLCStatus.ts:104](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L104)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **chapters**: *any[]*
 
-Defined in http/classes/VLCStatus.ts:105
+*Defined in [http/classes/VLCStatus.ts:105](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L105)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **title**: *number*
 
-Defined in http/classes/VLCStatus.ts:106
+*Defined in [http/classes/VLCStatus.ts:106](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L106)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **titles**: *any[]*
 
-Defined in http/classes/VLCStatus.ts:108
+*Defined in [http/classes/VLCStatus.ts:108](https://github.com/dylhack/vlc.js/blob/8f58ccf/src/http/classes/VLCStatus.ts#L108)*
