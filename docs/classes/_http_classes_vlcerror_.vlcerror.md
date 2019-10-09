@@ -10,9 +10,7 @@
 
 ## Hierarchy
 
-* Error
-
-  ↳ **VLCError**
+* **VLCError**
 
 ## Index
 
@@ -24,10 +22,7 @@
 
 * [command](_http_classes_vlcerror_.vlcerror.md#command)
 * [message](_http_classes_vlcerror_.vlcerror.md#message)
-* [name](_http_classes_vlcerror_.vlcerror.md#name)
-* [stack](_http_classes_vlcerror_.vlcerror.md#optional-stack)
 * [vlcRequest](_http_classes_vlcerror_.vlcerror.md#vlcrequest)
-* [Error](_http_classes_vlcerror_.vlcerror.md#static-error)
 
 ## Constructors
 
@@ -35,7 +30,7 @@
 
 \+ **new VLCError**(`vlcRequest`: [VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)): *[VLCError](_http_classes_vlcerror_.vlcerror.md)*
 
-Defined in http/classes/VLCError.ts:11
+*Defined in [http/classes/VLCError.ts:12](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCError.ts#L12)*
 
 **`constructor`** 
 
@@ -53,7 +48,7 @@ Name | Type | Description |
 
 • **command**: *string | string[]*
 
-Defined in http/classes/VLCError.ts:11
+*Defined in [http/classes/VLCError.ts:11](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCError.ts#L11)*
 
 ___
 
@@ -61,31 +56,7 @@ ___
 
 • **message**: *string*
 
-*Inherited from void*
-
-Defined in C:/Users/dylha/WebstormProjects/vlc.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:974
-
-___
-
-###  name
-
-• **name**: *string*
-
-*Inherited from void*
-
-Defined in C:/Users/dylha/WebstormProjects/vlc.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:973
-
-___
-
-### `Optional` stack
-
-• **stack**? : *undefined | string*
-
-*Inherited from void*
-
-*Overrides void*
-
-Defined in C:/Users/dylha/WebstormProjects/vlc.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:975
+*Defined in [http/classes/VLCError.ts:12](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCError.ts#L12)*
 
 ___
 
@@ -93,12 +64,4 @@ ___
 
 • **vlcRequest**: *[VLCRequest](_http_classes_vlcrequest_.vlcrequest.md)*
 
-Defined in http/classes/VLCError.ts:10
-
-___
-
-### `Static` Error
-
-▪ **Error**: *ErrorConstructor*
-
-Defined in C:/Users/dylha/WebstormProjects/vlc.js/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:984
+*Defined in [http/classes/VLCError.ts:10](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCError.ts#L10)*

@@ -28,7 +28,7 @@
 
 Ƭ **ConfigItem**: *object*
 
-Defined in util/VLCRCModifier.ts:21
+*Defined in [util/VLCRCModifier.ts:21](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L21)*
 
 #### Type declaration:
 
@@ -44,7 +44,7 @@ Defined in util/VLCRCModifier.ts:21
 
 ▸ **_getPath**(): *string | undefined*
 
-Defined in util/VLCRCModifier.ts:41
+*Defined in [util/VLCRCModifier.ts:41](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L41)*
 
 **Returns:** *string | undefined*
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **_readLine**(`line`: string): *[ConfigItem](_util_vlcrcmodifier_.md#configitem) | undefined*
 
-Defined in util/VLCRCModifier.ts:27
+*Defined in [util/VLCRCModifier.ts:27](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L27)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **editVLCRC**(`location?`: undefined | string): *[VLCRCModifier](../classes/_util_vlcrcmodifier_.vlcrcmodifier.md)*
 
-Defined in util/VLCRCModifier.ts:67
+*Defined in [util/VLCRCModifier.ts:67](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L67)*
 
 If no location is provided it will get the default install location
 
@@ -88,7 +88,7 @@ Name | Type |
 
 ### ▪ **locations**: *object*
 
-Defined in util/VLCRCModifier.ts:9
+*Defined in [util/VLCRCModifier.ts:9](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L9)*
 
 **`link`** https://wiki.videolan.org/Preferences/
 Last updated: September 15th, 2019
@@ -97,11 +97,11 @@ Last updated: September 15th, 2019
 
 • **win32**: *string* =  `${os.homedir()}\\AppData\\Roaming\\vlc\\vlcrc`
 
-Defined in util/VLCRCModifier.ts:18
+*Defined in [util/VLCRCModifier.ts:18](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L18)*
 
 ▪ **macos**: *object*
 
-Defined in util/VLCRCModifier.ts:14
+*Defined in [util/VLCRCModifier.ts:14](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L14)*
 
 * **v8**: *string* =  `${os.homedir()}/Library/Preferences/org.videolan.vlc`
 
@@ -109,7 +109,7 @@ Defined in util/VLCRCModifier.ts:14
 
 ▪ **unix**: *object*
 
-Defined in util/VLCRCModifier.ts:10
+*Defined in [util/VLCRCModifier.ts:10](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L10)*
 
 * **v8**: *string* =  `${os.homedir()}/.vlc/vlcrc`
 

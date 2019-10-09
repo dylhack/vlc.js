@@ -22,7 +22,7 @@
 
 • **brightness**: *number*
 
-Defined in http/classes/VLCStatus.ts:164
+*Defined in [http/classes/VLCStatus.ts:164](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L164)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **contrast**: *number*
 
-Defined in http/classes/VLCStatus.ts:163
+*Defined in [http/classes/VLCStatus.ts:163](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L163)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **gamma**: *number*
 
-Defined in http/classes/VLCStatus.ts:165
+*Defined in [http/classes/VLCStatus.ts:165](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L165)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **hue**: *number*
 
-Defined in http/classes/VLCStatus.ts:161
+*Defined in [http/classes/VLCStatus.ts:161](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L161)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **saturation**: *number*
 
-Defined in http/classes/VLCStatus.ts:162
+*Defined in [http/classes/VLCStatus.ts:162](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L162)*

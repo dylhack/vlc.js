@@ -20,7 +20,7 @@
 
 • **Stream 0**: *[Stream0](_http_classes_vlcstatus_.stream0.md)*
 
-Defined in http/classes/VLCStatus.ts:112
+*Defined in [http/classes/VLCStatus.ts:112](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L112)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **Stream 1**: *[Stream1](_http_classes_vlcstatus_.stream1.md)*
 
-Defined in http/classes/VLCStatus.ts:113
+*Defined in [http/classes/VLCStatus.ts:113](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L113)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **meta**: *[Meta](_http_classes_vlcstatus_.meta.md) | any*
 
-Defined in http/classes/VLCStatus.ts:114
+*Defined in [http/classes/VLCStatus.ts:114](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L114)*

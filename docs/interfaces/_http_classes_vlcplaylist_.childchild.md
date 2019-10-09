@@ -24,7 +24,7 @@
 
 • **current**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:45
+*Defined in [http/classes/VLCPlaylist.ts:45](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L45)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **duration**: *number*
 
-Defined in http/classes/VLCPlaylist.ts:43
+*Defined in [http/classes/VLCPlaylist.ts:43](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L43)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **id**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:42
+*Defined in [http/classes/VLCPlaylist.ts:42](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L42)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **name**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:41
+*Defined in [http/classes/VLCPlaylist.ts:41](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L41)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **ro**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:39
+*Defined in [http/classes/VLCPlaylist.ts:39](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L39)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **type**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:40
+*Defined in [http/classes/VLCPlaylist.ts:40](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L40)*
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 • **uri**: *string*
 
-Defined in http/classes/VLCPlaylist.ts:44
+*Defined in [http/classes/VLCPlaylist.ts:44](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCPlaylist.ts#L44)*

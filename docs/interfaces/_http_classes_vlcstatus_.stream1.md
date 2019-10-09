@@ -23,7 +23,7 @@
 
 • **Bits_per_sample**: *string*
 
-Defined in http/classes/VLCStatus.ts:135
+*Defined in [http/classes/VLCStatus.ts:135](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L135)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **Channels**: *string*
 
-Defined in http/classes/VLCStatus.ts:133
+*Defined in [http/classes/VLCStatus.ts:133](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L133)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **Codec**: *string*
 
-Defined in http/classes/VLCStatus.ts:132
+*Defined in [http/classes/VLCStatus.ts:132](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L132)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **Language**: *string*
 
-Defined in http/classes/VLCStatus.ts:136
+*Defined in [http/classes/VLCStatus.ts:136](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L136)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **Sample_rate**: *string*
 
-Defined in http/classes/VLCStatus.ts:137
+*Defined in [http/classes/VLCStatus.ts:137](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L137)*
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 • **Type**: *string*
 
-Defined in http/classes/VLCStatus.ts:134
+*Defined in [http/classes/VLCStatus.ts:134](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L134)*

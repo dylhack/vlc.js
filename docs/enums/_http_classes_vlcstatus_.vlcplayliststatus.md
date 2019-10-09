@@ -17,7 +17,7 @@
 
 • **paused**: = "paused"
 
-Defined in http/classes/VLCStatus.ts:64
+*Defined in [http/classes/VLCStatus.ts:64](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L64)*
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 • **playing**: = "playing"
 
-Defined in http/classes/VLCStatus.ts:63
+*Defined in [http/classes/VLCStatus.ts:63](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L63)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **stopped**: = "stopped"
 
-Defined in http/classes/VLCStatus.ts:62
+*Defined in [http/classes/VLCStatus.ts:62](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L62)*
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 • **unknown**: = "unknown"
 
-Defined in http/classes/VLCStatus.ts:65
+*Defined in [http/classes/VLCStatus.ts:65](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L65)*

@@ -22,7 +22,7 @@
 
 • **filter_0**: *string*
 
-Defined in http/classes/VLCStatus.ts:69
+*Defined in [http/classes/VLCStatus.ts:69](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L69)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **filter_1**: *string*
 
-Defined in http/classes/VLCStatus.ts:70
+*Defined in [http/classes/VLCStatus.ts:70](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L70)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **filter_2**: *string*
 
-Defined in http/classes/VLCStatus.ts:71
+*Defined in [http/classes/VLCStatus.ts:71](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L71)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **filter_3**: *string*
 
-Defined in http/classes/VLCStatus.ts:72
+*Defined in [http/classes/VLCStatus.ts:72](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L72)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **filter_4**: *string*
 
-Defined in http/classes/VLCStatus.ts:73
+*Defined in [http/classes/VLCStatus.ts:73](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L73)*

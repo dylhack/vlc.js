@@ -4,8 +4,8 @@
 
 **`enum`** VLCCommand
 
-**`description`** These are all the available commands that the HTTP server can take. These commands were pulled from the
-source code and was last updated September 10th, 2019.
+**`description`** These are all the available commands that the HTTP server can take. These commands
+    were pulled from the source code and was last updated September 10th, 2019.
 
 **`link`** https://github.com/videolan/vlc/blob/master/share/lua/intf/modules/httprequests.lua
 
@@ -56,7 +56,7 @@ source code and was last updated September 10th, 2019.
 
 • **addsubtitle**: = "addsubtitle"
 
-Defined in http/Requester.ts:36
+*Defined in [http/Requester.ts:33](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L33)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **aspectratio**: = "aspectratio"
 
-Defined in http/Requester.ts:61
+*Defined in [http/Requester.ts:58](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L58)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **audio_track**: = "audio_track"
 
-Defined in http/Requester.ts:68
+*Defined in [http/Requester.ts:65](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L65)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • **audiodelay**: = "audiodelay"
 
-Defined in http/Requester.ts:58
+*Defined in [http/Requester.ts:55](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L55)*
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **chapter**: = "chapter"
 
-Defined in http/Requester.ts:67
+*Defined in [http/Requester.ts:64](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L64)*
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **enableeq**: = "enableeq"
 
-Defined in http/Requester.ts:64
+*Defined in [http/Requester.ts:61](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L61)*
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 • **equalizer**: = "equalizer"
 
-Defined in http/Requester.ts:63
+*Defined in [http/Requester.ts:60](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L60)*
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 • **fullscreen**: = "fullscreen"
 
-Defined in http/Requester.ts:53
+*Defined in [http/Requester.ts:50](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L50)*
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 • **in_enqueue**: = "in_enqueue"
 
-Defined in http/Requester.ts:37
+*Defined in [http/Requester.ts:34](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L34)*
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 • **in_play**: = "in_play"
 
-Defined in http/Requester.ts:35
+*Defined in [http/Requester.ts:32](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L32)*
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 • **key**: = "key"
 
-Defined in http/Requester.ts:57
+*Defined in [http/Requester.ts:54](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L54)*
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 • **pl_delete**: = "pl_delete"
 
-Defined in http/Requester.ts:45
+*Defined in [http/Requester.ts:42](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L42)*
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 • **pl_empty**: = "pl_empty"
 
-Defined in http/Requester.ts:46
+*Defined in [http/Requester.ts:43](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L43)*
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 • **pl_forcepause**: = "pl_forcepause"
 
-Defined in http/Requester.ts:40
+*Defined in [http/Requester.ts:37](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L37)*
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 • **pl_forceresume**: = "pl_forceresume"
 
-Defined in http/Requester.ts:41
+*Defined in [http/Requester.ts:38](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L38)*
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 • **pl_loop**: = "pl_loop"
 
-Defined in http/Requester.ts:49
+*Defined in [http/Requester.ts:46](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L46)*
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 • **pl_next**: = "pl_next"
 
-Defined in http/Requester.ts:43
+*Defined in [http/Requester.ts:40](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L40)*
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 • **pl_pause**: = "pl_pause"
 
-Defined in http/Requester.ts:39
+*Defined in [http/Requester.ts:36](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L36)*
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 • **pl_play**: = "pl_play"
 
-Defined in http/Requester.ts:38
+*Defined in [http/Requester.ts:35](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L35)*
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 • **pl_previous**: = "pl_previous"
 
-Defined in http/Requester.ts:44
+*Defined in [http/Requester.ts:41](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L41)*
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 • **pl_random**: = "pl_random"
 
-Defined in http/Requester.ts:48
+*Defined in [http/Requester.ts:45](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L45)*
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 • **pl_repeat**: = "pl_repeat"
 
-Defined in http/Requester.ts:50
+*Defined in [http/Requester.ts:47](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L47)*
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 • **pl_sd_add**: = "pl_sd_add"
 
-Defined in http/Requester.ts:51
+*Defined in [http/Requester.ts:48](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L48)*
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 • **pl_sd_remove**: = "pl_sd_remove"
 
-Defined in http/Requester.ts:52
+*Defined in [http/Requester.ts:49](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L49)*
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 • **pl_sort**: = "pl_sort"
 
-Defined in http/Requester.ts:47
+*Defined in [http/Requester.ts:44](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L44)*
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 • **pl_stop**: = "pl_stop"
 
-Defined in http/Requester.ts:42
+*Defined in [http/Requester.ts:39](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L39)*
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 • **preamp**: = "preamp"
 
-Defined in http/Requester.ts:62
+*Defined in [http/Requester.ts:59](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L59)*
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 • **rate**: = "rate"
 
-Defined in http/Requester.ts:59
+*Defined in [http/Requester.ts:56](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L56)*
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 • **seek**: = "seek"
 
-Defined in http/Requester.ts:56
+*Defined in [http/Requester.ts:53](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L53)*
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 • **setpreset**: = "setpreset"
 
-Defined in http/Requester.ts:65
+*Defined in [http/Requester.ts:62](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L62)*
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 • **snapshot**: = "snapshot"
 
-Defined in http/Requester.ts:54
+*Defined in [http/Requester.ts:51](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L51)*
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 • **subdelay**: = "subdelay"
 
-Defined in http/Requester.ts:60
+*Defined in [http/Requester.ts:57](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L57)*
 
 ___
 
@@ -312,7 +312,7 @@ ___
 
 • **subtitle_track**: = "subtitle_track"
 
-Defined in http/Requester.ts:70
+*Defined in [http/Requester.ts:67](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L67)*
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 • **title**: = "title"
 
-Defined in http/Requester.ts:66
+*Defined in [http/Requester.ts:63](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L63)*
 
 ___
 
@@ -328,7 +328,7 @@ ___
 
 • **video_track**: = "video_track"
 
-Defined in http/Requester.ts:69
+*Defined in [http/Requester.ts:66](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L66)*
 
 ___
 
@@ -336,4 +336,4 @@ ___
 
 • **volume**: = "volume"
 
-Defined in http/Requester.ts:55
+*Defined in [http/Requester.ts:52](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/Requester.ts#L52)*

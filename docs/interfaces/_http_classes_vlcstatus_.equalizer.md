@@ -20,7 +20,7 @@
 
 • **bands**: *object*
 
-Defined in http/classes/VLCStatus.ts:78
+*Defined in [http/classes/VLCStatus.ts:78](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L78)*
 
 #### Type declaration:
 
@@ -32,7 +32,7 @@ ___
 
 • **preamp**: *number*
 
-Defined in http/classes/VLCStatus.ts:79
+*Defined in [http/classes/VLCStatus.ts:79](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L79)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • **presets**: *[Presets](_http_classes_vlcstatus_.presets.md)*
 
-Defined in http/classes/VLCStatus.ts:77
+*Defined in [http/classes/VLCStatus.ts:77](https://github.com/dylhack/vlc.js/blob/3931a7c/src/http/classes/VLCStatus.ts#L77)*

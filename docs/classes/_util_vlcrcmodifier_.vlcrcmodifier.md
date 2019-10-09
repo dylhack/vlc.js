@@ -31,7 +31,7 @@
 
 \+ **new VLCRCModifier**(`data`: Buffer): *[VLCRCModifier](_util_vlcrcmodifier_.vlcrcmodifier.md)*
 
-Defined in util/VLCRCModifier.ts:79
+*Defined in [util/VLCRCModifier.ts:79](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L79)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **_map**: *Map‹string, [ConfigItem](../modules/_util_vlcrcmodifier_.md#configitem)›*
 
-Defined in util/VLCRCModifier.ts:78
+*Defined in [util/VLCRCModifier.ts:78](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L78)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **_original**: *Buffer*
 
-Defined in util/VLCRCModifier.ts:79
+*Defined in [util/VLCRCModifier.ts:79](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L79)*
 
 ## Methods
 
@@ -63,7 +63,7 @@ Defined in util/VLCRCModifier.ts:79
 
 ▸ **disable**(`key`: string): *[ConfigItem](../modules/_util_vlcrcmodifier_.md#configitem) | undefined*
 
-Defined in util/VLCRCModifier.ts:105
+*Defined in [util/VLCRCModifier.ts:105](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L105)*
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ ___
 
 ▸ **enable**(`key`: string): *[ConfigItem](../modules/_util_vlcrcmodifier_.md#configitem) | undefined*
 
-Defined in util/VLCRCModifier.ts:114
+*Defined in [util/VLCRCModifier.ts:114](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L114)*
 
 **Parameters:**
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **export**(): *Buffer*
 
-Defined in util/VLCRCModifier.ts:123
+*Defined in [util/VLCRCModifier.ts:123](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L123)*
 
 **Returns:** *Buffer*
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **get**(`key`: string): *[ConfigItem](../modules/_util_vlcrcmodifier_.md#configitem) | undefined*
 
-Defined in util/VLCRCModifier.ts:92
+*Defined in [util/VLCRCModifier.ts:92](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L92)*
 
 **Parameters:**
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **set**(`key`: string, `value`: boolean | number | string): *[ConfigItem](../modules/_util_vlcrcmodifier_.md#configitem) | undefined*
 
-Defined in util/VLCRCModifier.ts:96
+*Defined in [util/VLCRCModifier.ts:96](https://github.com/dylhack/vlc.js/blob/3931a7c/src/util/VLCRCModifier.ts#L96)*
 
 **Parameters:**
 
