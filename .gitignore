@@ -87,4 +87,4 @@ types/
 # DynamoDB Local files
 .dynamodb/
 
-lib/
+build/

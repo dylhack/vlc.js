@@ -1,14 +1,18 @@
-![Banner](./GitHub%20Banner2.png)
+![Banner](./docs/GitHub%20Banner2.png)
 
----
-VLC HTTP endpoint wrapper for NodeJS developers. All documentation can be found in the [docs](./docs/index.html) directory.
+```sh
+npm i vlc.js
+```
 
-## Example Usage
+# Example Usage
+
 ```javascript
-const vlc = require('vlc.js');
-const client = new vlc.Client({ address: '127.0.0.1', password: 'rosebud', port: 8080});
-client.getStatus()
-    .then((status) => {
-      console.log('Status of the VLC', status)
-    })
+import Client from 'vlc.js';
+
+const client = new Client(
+  'http://127.0.0.1:8080',
+  'rosebud',
+);
+const status = await client.getStatus();
+console.log(`${status.meta.title} is playing.`);
 ```

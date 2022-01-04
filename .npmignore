@@ -1,4 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
 logs
@@ -90,3 +89,8 @@ typings/
 .dynamodb/
 
 src/
+docs/
+.gitignore
+tsconfig.json
+yarn-error.log
+yarn.lock
