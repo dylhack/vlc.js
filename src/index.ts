@@ -1,11 +1,8 @@
 import got, { OptionsInit } from 'got';
 import { URL } from 'url';
-import {
-  VLCStatus,
-  VLCPlaylist,
-} from './types.js';
+import { VLCStatus, VLCPlaylist } from './types.js';
 
-type SortMode = 
+type SortMode =
   | 0
   | 1
   | 3
